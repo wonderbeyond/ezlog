@@ -1,7 +1,6 @@
 # coding=utf-8
 from django.contrib import admin
 from django import forms
-from ckeditor.widgets import CKEditorWidget
 
 from blog.models import *
 from blog.forms import *

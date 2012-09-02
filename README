@@ -1,14 +1,14 @@
 required:
 
-- pyquery
+- pyquery (need lxml)
 
-- django-filebrowser
+- django-filebrowser (need PIL)
 
 - django-grappelli
 
-- django-south
+- south
 
-- django-compressor(need lxml)
+- django-compressor
 
 
 notes:

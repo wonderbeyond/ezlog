@@ -8,7 +8,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 COMPRESS_ENABLED = not DEBUG
-COMPRESS_PARSER = 'compressor.parser.LxmlParser'
+#COMPRESS_PARSER = 'compressor.parser.LxmlParser'
 COMPRESS_OFFLINE = True
 
 ADMINS = (

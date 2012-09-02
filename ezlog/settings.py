@@ -30,9 +30,6 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
-if os.environ.get('DATABASE_URL', None):
-    import dj_database_url
-    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 CACHES = {
     'default': {
@@ -274,3 +271,6 @@ CKEDITOR_CONFIGS = {
 }
 
 GRAPPELLI_ADMIN_TITLE = u'EZLog\u7ad9\u70b9\u7ba1\u7406'
+
+if os.environ.get('DATABASE_URL', None):
+    from settings_heroku import *

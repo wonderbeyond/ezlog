@@ -77,9 +77,7 @@ MEDIA_ROOT = TO_ABS_PATH('media')
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = '/media/'
 
-#CKEDITOR_UPLOAD_PATH = TO_ABS_PATH('media/upload/i/')
-
-FILEBROWSER_DIRECTORY = 'upload/'
+FILEBROWSER_DIRECTORY = 'uploads/'
 FILEBROWSER_VERSIONS_BASEDIR = 'thumbnails/'
 
 FILEBROWSER_ADMIN_VERSIONS = ['thumbnail', 'small', 'medium', 'big',]

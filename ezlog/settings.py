@@ -30,6 +30,9 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+if os.environ.get('DATABASE_URL', None):
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 CACHES = {
     'default': {

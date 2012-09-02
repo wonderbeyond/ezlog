@@ -1,0 +1,14 @@
+<div class="panel categroy">
+  <div class="panelbar">图片集</div>
+  <div class="panelbody">
+    <ul>
+      {#TODO: 对此部分输出进行缓存#}
+      {% for c in categories %}
+      <li>»<a href="{{c.get_absolute_url}}">{{c.name}}</a>
+        {% if site_config.category_with_article_count %}({{c.entry_set.all|length}}){% endif %}
+      </li>
+      {% endfor  %}
+      <div class="clear"></div>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+{% load i18n %}
+<form method="post" action="{% url ezconf.save %}">{% csrf_token %}
+{% for group in settings %}
+<fieldset class="grp-module" data-group="{{group.name}}">
+  <h2 class="grp-collapse-handler">{{group.verbose_name}}</h2>
+  {% for field in group.fields %}
+  <div class="grp-row {{field.name}}">
+      <div class="l-2c-fluid l-d-4">
+          <div class="c-1"><label for="id_{{field.name}}">{{field.verbose_name}}</label></div>
+          <div class="c-2">
+            {% if field.type == "text" or field.type == "number" %}
+            <input id="id_{{field.name}}" class="{%if field.type != "number"%}vTextField{%endif%}"
+                name="{{group.name}}.{{field.name}}" type="{{field.type}}" value={{field.value}} />
+            {% elif field.type == "longtext" %}
+            <textarea id="id_{{field.name}}" class="vLargeTextField"
+                name="{{group.name}}.{{field.name}}">{{field.value|safe}}</textarea>
+            {% endif %}
+            <p class="grp-help">{{field.desc}}</p>
+          </div>
+      </div>
+  </div>
+  {% endfor %}
+</fieldset>
+{% endfor %}
+
+<footer id="submit" class="grp-module grp-submit-row grp-fixed-footer">
+  <ul>
+    <li><input type="submit" class="grp-button grp-default" name="_save" value="{% trans "Save" %}"/></li>
+    <li><input type="submit" class="grp-button" name="_continue" value="{% trans 'Save and continue editing' %}"/></li>
+  </ul>
+</footer>
+</form>

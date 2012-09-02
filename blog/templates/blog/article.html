@@ -1,0 +1,10 @@
+{% extends "blog/blog.html" %}
+{% block main %}
+  <div class="article complete">
+    <h1 class="article-title"><a href="{{entry.get_absolute_url}}">{{entry.title}}</a></h1>
+    <div class="article-info">
+      {% include "blog/article-info.html" %}
+    </div>
+    <div class="content">{{entry.content|safe}}</div>
+  </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+required:
+
+- pyquery
+
+- django-filebrowser
+
+- django-grappelli
+
+- django-south
+
+- django-compressor(need lxml)
+
+
+notes:
+
+- BootStrap customed:
+
+    body {
+        font-size: 13px;
+        line-height: 18px;
+    }

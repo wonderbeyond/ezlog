@@ -1,0 +1,10 @@
+<div class="panel tag-cloud">
+    <div class="panelbar">标签云</div>
+    <div class="panelbody">
+        {% spaceless %}
+        {% for t in tags %}
+        <a href="{{t.get_absolute_url}}">{{t.name}}</a>
+        {% endfor %}
+        {% endspaceless %}
+    </div>
+</div>

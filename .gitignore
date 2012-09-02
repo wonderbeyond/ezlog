@@ -1,0 +1,12 @@
+*.py[co]
+.*.sw[po]
+*.xcf
+*~*
+tags
+
+
+/static/
+/media/
+/data/
+
+disabled/

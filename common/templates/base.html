@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load compress %}
+<!--[if IE 6]><html class="ie6 oldie"><![endif]-->
+<!--[if IE 7]><html class="ie7 oldie"><![endif]-->
+<!--[if IE 8]><html class="ie8 oldie"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><html lang="zh-CN" class="standard"><!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<title>{% block title %}ezlog{% endblock %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{{site_config.description}}" />
+
+{% block stylesheets %}
+ {% compress css %}
+ <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+ <link href="/static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+ <link rel="stylesheet" href="/static/css/ezlog.css" />
+ {% endcompress %}
+{% endblock stylesheets %}
+{% block ext_stylesheets %}{% endblock %}
+
+{% block javascripts %}
+ {% compress js %}
+ <script src="/static/js/jquery.min.js"></script>
+ <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+ <script src="/static/js/ezlog.js"></script>
+ {% endcompress %}
+{% endblock javascripts %}
+{% block ext_javascripts %}{% endblock %}
+
+{% block ext_head %}{% endblock %}
+
+<!--Make IE6-8 behave standard-->
+<!--[if lt IE 9]>
+ <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+ <script src="/static/js/fix-ie6-8.js"></script>
+<![endif]-->
+
+<!--Fix IE6 with BootStrap-->
+<!--[if IE 6]>
+ <link href="/static/Bootstrap-IE6/ie6.min.css" rel="stylesheet />
+ <script src="/static/Bootstrap-IE6/ie6.min.js"></script>
+ <style>.main, {float: left;} .sidebar {float: right;}</style>
+<![endif]-->
+
+</head>
+<body>
+  <div class="container">
+    <!--页面头部-->
+    <div class="row-fluid header">
+        <div>
+            {% spaceless %}
+            <h1 class="site-title">
+                <a href="{% url site.index %}">{{ezsettings.common.site_title|default:"EZLog"}}</a>
+            </h1>
+            {% endspaceless %}
+            <p class="motto">{{ezsettings.common.site_motto|default:"留一半清醒啊留一半醉，至少梦里有你追随~"}}</p>
+        </div>
+
+        <div>
+            <div class="global-nav horizontal">
+                {% block global_nav %}
+                <div class="toggle-button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div> <!-- .toggle-button -->
+                <form class="search-form" action="{% url blog.index %}" method="get">
+                    <input name="search" type="search" placeholder="搜索" class="" />
+                    <button type="submit" class="">搜索</button>
+                </form>
+                <ul class="nav-links">
+                    <li><a href="{% url site.index %}">首页</a></li>
+                    <li><a href="{% url plog.index %}">图志</a></li>
+                    {% for P in nav_pages %}
+                        <li class="more"><a href={{P.page.get_absolute_url}}>{{P.title}}</a></li>
+                    {% endfor %}
+                </ul> <!-- .nav-links -->
+                {% endblock global_nav %}
+            </div>
+        </div>
+    </div> <!-- .header -->
+
+    <div class="row-fluid content-wrapper">
+      <!--正文区块-->
+      <div class="span8 main">
+      {% block main %}this base template{% endblock %}
+      </div>
+
+      <!--侧边栏-->
+      <div class="span4 sidebar">
+        {% block sidebar %}
+          {% include "panels/broadcast.html" %}
+          {% include "panels/friend-links.html" %}
+          {% include "panels/sina-weibo.html" %}
+        {% endblock sidebar %}
+      </div> <!-- .sidebar -->
+    </div>
+
+    <!--页脚-->
+    <div class="row-fluid footer">
+      <div class="span12">
+        <p class="copyright">Copyright © 2012 Wonder.
+          保留所有权利, 除非另有说明.</p>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

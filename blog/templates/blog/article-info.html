@@ -1,0 +1,15 @@
+<span class="item datetime"><i class="icon-time k"></i>
+    <a class="year" href="/?y={{entry.created|date:'Y'}}">{{entry.created|date:"Y"}}</a>-<a
+        class="month" href="/?ym={{entry.created|date:'Y.m'}}">{{entry.created|date:"m"}}</a>-<a
+        class="day" href="/?ymd={{entry.created|date:'Y.m.d'}}">{{entry.created|date:"d"}}</a>
+    {{entry.created|date:"H:i"}}
+</span>
+<span class="item"><i class="icon-th-large k"></i>
+    <a href="{{entry.category.get_absolute_url}}" class="item">{{entry.category}}</a>
+</span>
+<span class="item tags"><i class="icon-tags k"></i>
+    {% for t in entry.tags_list %}
+    <a class="tag-item" href="{{t.get_absolute_url}}">{{t.name}}</a>
+    {% endfor %}
+</span>
+<span class="item"><i class="icon-comment"></i>...</span>

@@ -1,0 +1,23 @@
+{% extends "blog/blog.html" %}
+
+{% block ext_javascripts %}
+{{block.super}}
+{% endblock ext_javascripts %}
+
+{% block main %}
+  {% for entry in entry_list %}
+  <div class="article summary">
+    <h1 class="article-title"><a href="{{entry.get_absolute_url}}">{{entry.title}}</a></h1>
+    <div class="article-info">{% include "blog/article-info.html" %}</div>
+    <div class="content">{{entry.get_summary|safe}}</div>
+  </div>
+  {% empty %}
+  <h3 class="empty-error">非常抱歉，找不到匹配的项目。</h3>
+  {% endfor %}
+  <div class="pagination"></div>
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $('.pagination').pagination({{paginator.num_pages}}, {{current_page}}, '{{current_url|safe}}');
+      });
+  </script>
+{% endblock %}

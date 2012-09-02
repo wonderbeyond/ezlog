@@ -1,0 +1,10 @@
+<div class="panel friend-links">
+  <div class="panelbar">友情链接</div>
+  <div class="panelbody clearfix">
+      <ul>
+          {% for L in friend_links %}
+          <li><a href="{{L.link}}" target="_blank" title="{{L.desc}}">{{L.name}}</a></li>
+          {% endfor %}
+      </ul>
+  </div>
+</div>

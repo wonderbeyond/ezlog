@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load fb_versions %}
+{% block ext_javascripts %}
+<script src="/static/js/plog/plog.js"></script>
+{% endblock  %}
+{% block sidebar %}
+  {% include "panels/broadcast.html" %}
+  {% include "plog/panels/category.html" %}
+  {% include "panels/tag-cloud.html" %}
+  {% include "panels/friend-links.html" %}
+  {% include "panels/sina-weibo.html" %}
+{% endblock sidebar %}
+{% block main %}
+  {% for pl in photo_list %}
+  <article class="plog">
+    <h1 class="photo-title">{{pl.title}}</h1>
+    <div class="meta-data">
+        <span class="item created-time"><i class="icon-time"></i> {{pl.created|date:'Y-m-d H:i'}}</span>
+        <a href="{{pl.category.get_absolute_url}}" class="item category"><i class="icon-th-large"></i> {{pl.category}}</a>
+    </div>
+    <a href="{{pl.photo.url}}" title="{{pl.title}}">
+        <img src="{% version pl.photo 'medium' %}" data-orig-src="{{pl.photo.url}}" alt="{{pl.photo.name}}" />
+    </a>
+    <p class="photo-desc">{{pl.desc}}</p>
+  </article>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block javascripts %}
+{{ block.super }}
+<script type="text/javascript"></script>
+{% endblock javascripts %}
+
+{% block breadcrumbs %}
+  <ul class="grp-horizontal-list">
+    <li><a href="{% url admin:index %}">{% trans "Home" %}</a></li>
+    <li>{% trans "EZLog settings" %}</li>
+  </ul>
+{% endblock %}
+
+{% block content %}
+  {% include "ezconf/change_form.html" %}
+{% endblock content %}

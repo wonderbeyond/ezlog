@@ -2,7 +2,7 @@
 from django.conf import settings
 import os, json
 
-ezconfig_file = settings.EZLOG_CONFIG_FILE
+from ezconf.models import EZSettingsData
 
 class EZSettings(object):
     '''EZLog 配置存储模型
@@ -15,13 +15,14 @@ class EZSettings(object):
 
     def load_settings(self):
         '''(重新)加载配置文件'''
-        self._mtime = os.path.getmtime(ezconfig_file)
-        self._settings = json.load(open(ezconfig_file))
+        settings_data = EZSettingsData.objects.get(pk=1)
+        self._settings = json.loads(settings_data.data)
+        self._mtime = settings_data.mtime
 
     @property
     def settings(self):
         '''返回最新的配置数据'''
-        if os.path.getmtime(ezconfig_file) > self._mtime:
+        if EZSettingsData.objects.get(pk=1).mtime > self._mtime:
             self.load_settings()
         return self._settings
 
@@ -52,8 +53,9 @@ class EZSettings(object):
         pass
 
     def save(self):
-        with open(ezconfig_file, 'w') as fw:
-            fw.write(self.as_json().encode('utf-8'))
+        settings_data = EZSettingsData.objects.get(pk=1)
+        settings_data.data = self.as_json().encode('utf-8')
+        settings_data.save()
 
 ezsettings = EZSettings()
 

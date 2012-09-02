@@ -18,7 +18,6 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATA_DIR = TO_ABS_PATH('data') # may used for storage of various data.
-EZLOG_CONFIG_FILE = TO_ABS_PATH('ezlog_config.json')
 
 DATABASES = {
     'default': {

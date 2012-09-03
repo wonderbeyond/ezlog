@@ -102,22 +102,26 @@ body {
             }
 
             &.horizontal {
-                @minHeight: 40px;
-                min-height: @minHeight;
-                _height: @minHeight;
+                @barHeight: 40px;
+                min-height: @barHeight;
+                _height: @barHeight;
                 padding-left: 8px;
 
                 li {
                     float: left;
                     _display: inline-block;
                     font-weight: normal;
-                    line-height: 20px;
-                    padding: 10px 12px;
+                    height: @barHeight;
+                    padding: 0 12px;
                     a, a:visited {
+                        display: inline-block;
+                        line-height: @barHeight/2;
+                        padding: @barHeight/4 0;
                         color: #DDD;
                         text-shadow: 0px 0px 1px #000;
                         &:hover {
                             color: #FFF;
+                            font-weight: bold;
                             text-shadow: 0px 1px 1px #000;
                         }
                     }

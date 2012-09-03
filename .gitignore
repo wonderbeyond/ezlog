@@ -9,8 +9,12 @@ tags
 /media/
 /data/
 
+static/css/*.less
+
 disabled/
 
 migrations/
 
 /ENV/
+
+.svn/

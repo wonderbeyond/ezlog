@@ -8,3 +8,5 @@
     <div class="content">{{entry.content|safe}}</div>
   </div>
 {% endblock %}
+
+{% block bodyclass %}{{block.super}} article{% endblock %}

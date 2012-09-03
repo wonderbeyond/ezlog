@@ -23,5 +23,6 @@ def _get_cache():
     }
 
 
-CACHES = _get_cache()
+DEBUG = False
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+CACHES = _get_cache()

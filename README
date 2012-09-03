@@ -1,8 +1,8 @@
-required:
+## required:
 
 - pyquery (need lxml)
 
-- django-filebrowser (need PIL)
+- django-filebrowser (need PIL(need libjpeg libjpeg-dev))
 
 - django-grappelli
 
@@ -11,11 +11,27 @@ required:
 - django-compressor
 
 
-notes:
 
-- BootStrap customed:
+## 对BootStrap的定制:
 
     body {
         font-size: 13px;
         line-height: 18px;
     }
+
+
+## 解决virtualenv中安装PIL出现的 `IOError: decoder jpeg not available` 问题:
+
+参考资料: http://ubuntuforums.org/showthread.php?p=10811107
+解决方法为:
+下载PIL源码(http://www.pythonware.com/products/pil/),
+编辑 setup.py, 找到 `add_directory(library_dirs, "/usr/lib")` 一行,
+在下面添加一行: `add_directory(library_dirs, "/usr/lib/i386-linux-gnu")`.
+然后在虚拟环境中执行 setup.py 安装PIL.
+另外, 系统需要安装 libjpeg libjpeg-dev 相关库.
+
+## setup:
+
+根据配置, 创建缓存数据库:
+
+    $ ./manage.py createcachetable ezlog_cache

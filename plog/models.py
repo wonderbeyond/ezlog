@@ -36,7 +36,7 @@ class Tag(models.Model):
 class PhotoLog(models.Model):
     author = models.ForeignKey(User, verbose_name=u'作者', editable=False)
     photo = models.ImageField(verbose_name=u'图片', max_length=200,
-                              upload_to='upload/plog/%Y/%m/%d')
+                              upload_to='uploads/plog/%Y/%m/%d')
     title = models.CharField(verbose_name=u'标题', max_length=200, unique=True)
     category = models.ForeignKey(Category, verbose_name=u'所属图集')
     tags = models.ManyToManyField(Tag, verbose_name='标签', null=True, blank=True)

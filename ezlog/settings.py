@@ -271,3 +271,6 @@ GRAPPELLI_ADMIN_TITLE = u'EZLog\u7ad9\u70b9\u7ba1\u7406'
 
 if os.environ.get('DATABASE_URL', None):
     from settings_heroku import *
+if 'SERVER_SOFTWARE' in os.environ:
+    # SAE
+    from ezlog.settings_sae import *

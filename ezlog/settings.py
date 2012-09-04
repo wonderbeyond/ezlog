@@ -38,7 +38,7 @@ DB_MYSQL = {
 }
 
 DATABASES = {
-    'default': DB_SQLITE3,
+    'default': DB_MYSQL,
 }
 
 CACHES = {
@@ -175,17 +175,17 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    #'grappelli.dashboard',
+    'grappelli',
+    'filebrowser',
+    'django.contrib.admin',
+    # 'django.contrib.admindocs',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'grappelli.dashboard',
-    'grappelli',
-    'filebrowser',
-    'django.contrib.admin',
-    # 'django.contrib.admindocs',
     'south',
     'compressor',
     'ezconf',

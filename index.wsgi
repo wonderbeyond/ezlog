@@ -1,4 +1,5 @@
-import os
+#for sae
+import os, sys
 import django.core.handlers.wsgi
 import sae
 
@@ -6,7 +7,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TO_ABS_PATH = lambda p: os.path.join(HERE, p)
 
 sys.path.insert(0, HERE)
-sys.path.insert(0, TO_ABS_PATH('lib'))
+sys.path.insert(0, TO_ABS_PATH('libs/virtualenv.bundle.zip'))
 
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'ezlog.settings'

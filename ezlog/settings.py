@@ -19,15 +19,26 @@ MANAGERS = ADMINS
 
 DATA_DIR = TO_ABS_PATH('data') # may used for storage of various data.
 
+DB_SQLITE3 = {
+    'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+    'NAME': TO_ABS_PATH('data/ezlog.sqlite3'),
+    'USER': '',                      # Not used with sqlite3.
+    'PASSWORD': '',                  # Not used with sqlite3.
+    'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+    'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+}
+
+DB_MYSQL = {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'ezlog',
+    'USER': 'wonder',
+    'PASSWORD': 'wo',
+    'HOST': 'localhost',
+    'PORT': '3306',
+}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': TO_ABS_PATH('data/ezlog.sqlite3'),
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
+    'default': DB_SQLITE3,
 }
 
 CACHES = {
@@ -269,8 +280,11 @@ CKEDITOR_CONFIGS = {
 
 GRAPPELLI_ADMIN_TITLE = u'EZLog\u7ad9\u70b9\u7ba1\u7406'
 
-if os.environ.get('DATABASE_URL', None):
+
+if 'DATABASE_URL' in os.environ:
+    # Heroku
     from settings_heroku import *
+
 if 'SERVER_SOFTWARE' in os.environ:
     # SAE
     from ezlog.settings_sae import *

@@ -14,6 +14,7 @@ from blog.models import *
 search_fields = ('title', 'content')
 
 def _base_context(request):
+    #FIXME: cache the result
     return {
         'categories': Category.objects.all(),
         'tags': Tag.objects.all(),

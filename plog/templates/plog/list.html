@@ -19,7 +19,8 @@
         <a href="{{pl.category.get_absolute_url}}" class="item category"><i class="icon-th-large"></i> {{pl.category}}</a>
     </div>
     <a href="{{pl.photo.url}}" title="{{pl.title}}">
-        <img src="{% version pl.photo 'medium' %}" data-orig-src="{{pl.photo.url}}" alt="{{pl.photo.name}}" />
+        {% version_object pl.photo 'medium' as thumbnail %}
+        <img src="{{thumbnail.url|default:pl.photo.url}}" data-orig-src="{{pl.photo.url}}" alt="{{pl.photo.name}}" />
     </a>
     <p class="photo-desc">{{pl.desc}}</p>
   </article>

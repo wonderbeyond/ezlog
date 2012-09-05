@@ -189,6 +189,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'compressor',
+    'taggit',
     'ezconf',
     'pages',
     'blog',

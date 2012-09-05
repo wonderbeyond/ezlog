@@ -9,6 +9,7 @@ from django.db.models import Q
 import re
 
 from plog.models import *
+import utils
 
 items_per_page = 20
 search_fields = ('title', 'desc')
@@ -16,7 +17,7 @@ search_fields = ('title', 'desc')
 def _base_context(request):
     return {
         'categories': Category.objects.all(),
-        'tags': Tag.objects.all(),
+        'tags': utils.tags_for('plog.photolog'),
     }
 
 def get(request, eid):

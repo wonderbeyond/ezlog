@@ -29,5 +29,3 @@ class PhotoLogAdmin(admin.ModelAdmin):
 
 admin.site.register(PhotoLog, PhotoLogAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Tag)
-

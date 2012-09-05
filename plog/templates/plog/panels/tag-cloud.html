@@ -1,9 +1,9 @@
 <div class="panel tag-cloud">
-    <div class="panelbar">标签云</div>
+    <div class="panelbar">标签</div>
     <div class="panelbody">
         {% spaceless %}
         {% for t in tags %}
-        <a href="{% url blog.query tag=t.id %}">{{t.name}}</a>
+        <a href="{% url plog.query tag=t.id %}">{{t.name}}</a>
         {% endfor %}
         {% endspaceless %}
     </div>

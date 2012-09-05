@@ -11,6 +11,8 @@ from filebrowser.base import FileObject
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 
+from taggit.managers import TaggableManager
+
 from blog.fields import *
 
 class BaseModel(models.Model):
@@ -41,30 +43,13 @@ class Category(BaseModel):
     def __unicode__(self):
         return self.name
 
-class Tag(BaseModel):
-    name = models.CharField(verbose_name=u'标签', max_length=50, unique=True, blank=False)
-    
-    class Meta:
-        verbose_name = u"标签"
-        verbose_name_plural = u"标签"
-
-    def __unicode__(self):
-        return self.name
-
-    @models.permalink
-    def get_absolute_url(self):
-        return ('blog.query', [], dict(tag=self.id))
-
-
-
 class Entry(BaseModel):
     title = models.CharField(max_length=200, unique=True,
                              verbose_name=u'标题')
     content = models.TextField(verbose_name=u'内容')
     author = models.ForeignKey(User, verbose_name=u'作者', editable=False)
     category = models.ForeignKey(Category, verbose_name=u'分类')
-    tags = models.ManyToManyField(Tag, verbose_name=u'标签', blank=True,
-                                  help_text=u'具有代表性的关键词, 使用逗号分隔多个标签!')
+    tags = TaggableManager(blank=True)
     created = models.DateTimeField(auto_now_add=True, verbose_name=u'创建时间')
     modified = models.DateTimeField(auto_now=True, verbose_name=u'修改时间')
     public = models.BooleanField(default=True, verbose_name=u'是否公开')
@@ -93,19 +78,6 @@ class Entry(BaseModel):
     def tags_list(self):
         '''列出附加到当前对象的标签'''
         return self.tags.all()
-
-    def apply_tags(self, tags):
-        assert not isinstance(tags, str)
-        for i in set(tags):
-            if i.strip(): self.tags.add(Tag.objects.get_or_create(name=i)[0])
-        return True
-
-    def rm_tag(self, tag):
-        try:
-            self.tags.remove( Tag.objects.get(name=tag) )
-        except Tag.DoesNotExist:
-            pass    # ignore tags that does not exist.
-        return True
 
     def generate_summary(self, nchars=200):
         '''提出摘要, 最终返回以HTML片段. 代表插图 + 前N个文字'''

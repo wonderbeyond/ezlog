@@ -47,6 +47,5 @@ class EntryAdmin(admin.ModelAdmin):
             'all': ('admin/article_page_fix.css',)
         }
 
-admin.site.register(Tag)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Entry, EntryAdmin)

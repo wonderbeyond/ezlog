@@ -10,6 +10,7 @@ import re
 
 from ezconf import ezsettings
 from blog.models import *
+import utils
 
 search_fields = ('title', 'content')
 
@@ -17,7 +18,7 @@ def _base_context(request):
     #FIXME: cache the result
     return {
         'categories': Category.objects.all(),
-        'tags': Tag.objects.all(),
+        'tags': utils.tags_for('blog.entry'),
     }
 
 def get(request, eid):

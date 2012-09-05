@@ -8,8 +8,6 @@
 
 各APP中的HTML title
 
-标签云中不去除没有被使用的标签
-
 !Blog列表摘要中自动提取的缩略图非常不适合极小尺寸图片(比如ckeditor表情)
 
 Disqus or duoshuo

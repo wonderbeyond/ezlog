@@ -10,7 +10,7 @@
           <div class="c-2">
             {% if field.type == "text" or field.type == "number" %}
             <input id="id_{{field.name}}" class="{%if field.type != "number"%}vTextField{%endif%}"
-                name="{{group.name}}.{{field.name}}" type="{{field.type}}" value={{field.value}} />
+                name="{{group.name}}.{{field.name}}" type="{{field.type}}" value="{{field.value}}" />
             {% elif field.type == "longtext" %}
             <textarea id="id_{{field.name}}" class="vLargeTextField"
                 name="{{group.name}}.{{field.name}}">{{field.value|safe}}</textarea>

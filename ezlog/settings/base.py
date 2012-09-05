@@ -2,6 +2,7 @@
 import os
 
 PROJECT_ROOT = os.path.abspath( os.path.dirname(os.path.dirname(__file__)) )
+PROJECT_ROOT = os.path.dirname(PROJECT_ROOT)
 TO_ABS_PATH = lambda p: os.path.join(PROJECT_ROOT, p)
 
 DEBUG = True
@@ -134,8 +135,8 @@ SECRET_KEY = '1fjx4f(s+f+7+q#vst*p@ft^&amp;m6f7j@g8lrnjvu(hzd8242x@%'
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.eggs.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -279,12 +280,3 @@ CKEDITOR_CONFIGS = {
 }
 
 GRAPPELLI_ADMIN_TITLE = u'EZLog\u7ad9\u70b9\u7ba1\u7406'
-
-
-if 'DATABASE_URL' in os.environ:
-    # Heroku
-    from settings_heroku import *
-
-if 'SERVER_SOFTWARE' in os.environ:
-    # SAE
-    from ezlog.settings_sae import *

@@ -1,0 +1,11 @@
+__init__.py 用来引导整个settings初始化流程:
+
+- base.py: 提供各种默认选项的基本设置, 首先被加载.
+
+- for_sae.py: 为SAE环境定制的选项.
+
+- for_heroku.py: 为 Heroku 环境定制的选项.
+
+- switcher.py: 开关文件, 用来切换不同的模式, 从而选择不同的配置.
+
+- local.py: 额外设置, 最后被加载.

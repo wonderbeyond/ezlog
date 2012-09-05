@@ -18,3 +18,7 @@ migrations/
 /ENV/
 
 .svn/
+
+/libs/
+
+ezlog/settings/local.py

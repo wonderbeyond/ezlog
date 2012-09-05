@@ -2,6 +2,7 @@
 import sae.const
 
 DEFAULT_FILE_STORAGE = 'saestorage.SaeStorage'
+FILEBROWSER_DIRECTORY = ''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',

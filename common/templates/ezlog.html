@@ -12,18 +12,18 @@
 
 {% block stylesheets %}
  {% compress css %}
- <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
- <link href="/static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
- <link rel="stylesheet" href="/static/css/ezlog.css" />
+ <link href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+ <link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+ <link rel="stylesheet" href="{{STATIC_URL}}css/ezlog.css" />
  {% endcompress %}
 {% endblock stylesheets %}
 {% block ext_stylesheets %}{% endblock %}
 
 {% block javascripts %}
  {% compress js %}
- <script src="/static/js/jquery.min.js"></script>
- <script src="/static/bootstrap/js/bootstrap.min.js"></script>
- <script src="/static/js/ezlog.js"></script>
+ <script src="{{STATIC_URL}}js/jquery.min.js"></script>
+ <script src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+ <script src="{{STATIC_URL}}js/ezlog.js"></script>
  {% endcompress %}
 {% endblock javascripts %}
 {% block ext_javascripts %}{% endblock %}
@@ -34,13 +34,13 @@
 <!--[if lt IE 9]>
  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
  <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
- <script src="/static/js/fix-ie6-8.js"></script>
+ <script src="{{STATIC_URL}}js/fix-ie6-8.js"></script>
 <![endif]-->
 
 <!--Fix IE6 with BootStrap-->
 <!--[if IE 6]>
- <link href="/static/Bootstrap-IE6/ie6.min.css" rel="stylesheet />
- <script src="/static/Bootstrap-IE6/ie6.min.js"></script>
+<link href="{{STATIC_URL}}Bootstrap-IE6/ie6.min.css" rel="stylesheet />
+<script src="{{STATIC_URL}}Bootstrap-IE6/ie6.min.js"></script>
  <style>.main, {float: left;} .sidebar {float: right;}</style>
 <![endif]-->
 

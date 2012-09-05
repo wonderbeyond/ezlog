@@ -1,7 +1,7 @@
 {% extends "ezlog.html" %}
 {% load fb_versions %}
 {% block ext_javascripts %}
-<script src="/static/js/plog/plog.js"></script>
+<script src="{{STATIC_URL}}js/plog/plog.js"></script>
 {% endblock  %}
 {% block sidebar %}
   {% include "panels/broadcast.html" %}

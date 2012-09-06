@@ -7,9 +7,12 @@
 <span class="item"><i class="icon-th-large k"></i>
     <a href="{{entry.category.get_absolute_url}}" class="item">{{entry.category}}</a>
 </span>
+{% if entry.tags_list %}
 <span class="item tags"><i class="icon-tags k"></i>
     {% for t in entry.tags_list %}
     <a class="tag-item" href="{{t.get_absolute_url}}">{{t.name}}</a>
     {% endfor %}
+</span>{% endif %}
+<span class="item"><i class="icon-comment"></i>
+    <span class="ds-thread-count" data-thread-key="blog.{{entry.pk}}">...</span>
 </span>
-<span class="item"><i class="icon-comment"></i>...</span>

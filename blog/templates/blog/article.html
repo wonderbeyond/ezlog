@@ -1,4 +1,5 @@
 {% extends "blog/blog.html" %}
+{% load ezlog_tags %}
 {% block main %}
   <div class="article complete">
     <h1 class="article-title"><a href="{{entry.get_absolute_url}}">{{entry.title}}</a></h1>
@@ -6,6 +7,26 @@
       {% include "blog/article-info.html" %}
     </div>
     <div class="content">{{entry.content|safe}}</div>
+  </div>
+  <div id="comments">
+    {% get_setting "DUOSHUO_SHORT_NAME" as DUOSHUO_SHORT_NAME %}
+    {% if DUOSHUO_SHORT_NAME %}
+    <!-- Duoshuo Comment BEGIN -->
+    <div class="ds-thread" data-thread-key="blog.{{entry.pk}}" 
+        data-title="{{entry.title}}" data-author-key="" data-url=""></div>
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"{{DUOSHUO_SHORT_NAME}}"};
+    (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = 'http://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- Duoshuo Comment END -->
+    {% endif %}
   </div>
 {% endblock %}
 

@@ -190,6 +190,7 @@ INSTALLED_APPS = (
     'south',
     'compressor',
     'taggit',
+    'common',
     'ezconf',
     'pages',
     'blog',
@@ -281,3 +282,4 @@ CKEDITOR_CONFIGS = {
 }
 
 GRAPPELLI_ADMIN_TITLE = u'EZLog\u7ad9\u70b9\u7ba1\u7406'
+DUOSHUO_SHORT_NAME = ''

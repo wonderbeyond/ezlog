@@ -141,6 +141,7 @@ TEMPLATE_LOADERS = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.request",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
@@ -176,7 +177,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    #'grappelli.dashboard',
+    'grappelli.dashboard',
     'grappelli',
     'filebrowser',
     'django.contrib.admin',
@@ -281,5 +282,6 @@ CKEDITOR_CONFIGS = {
     },
 }
 
+GRAPPELLI_INDEX_DASHBOARD = 'ezlog.dashboard.CustomIndexDashboard'
 GRAPPELLI_ADMIN_TITLE = u'EZLog\u7ad9\u70b9\u7ba1\u7406'
 DUOSHUO_SHORT_NAME = ''

@@ -1,0 +1,79 @@
+.panel.recent-comments {
+    .panelbody {
+        // 因为多说评论列表的第一个li的有了padding-top
+        padding-top: 0 !important;
+        ul.ds-recent-comments {
+            li.ds-comment {
+                border: 0 !important;
+                .ds-avatar {
+                    img {
+                        .border-radius(5px);
+                        .box-shadow(0 1px 2px rgba(0, 0, 0, 0.36));
+                    }
+                }
+            }
+        }
+    }
+}
+
+.panel.recent-visitors {
+    .ds-recent-visitors {
+        .ds-avatar {
+            img {
+                border: 1px solid #CCC;
+                padding: 1px;
+                .border-radius(2px);
+            }
+        }
+    }
+}
+
+.ds-thread {
+    margin-top: 20px;
+    #ds-reset {
+        a:active {
+            top: 0 !important;
+        }
+        .ds-highlight{}
+    }
+    .ds-post, .ds-toolbar {
+        border-top: 0 !important;
+    }
+
+    .ds-post {
+        border: 0px !important;
+        .ds-post-self {
+            .ds-post-main {
+                position: relative;
+                background: rgba(228, 245, 209, 0.38) !important;
+                padding: 15px 15px 10px 10px !important;
+                .border-radius(5px);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.75);
+
+                .ds-avatar {
+                    position: relative;
+                    padding: 3px !important;
+                    background-color: @baseBackgroundColor !important;
+                    border: 1px solid #E7F3D8 !important;
+                    border-radius: 50% !important;
+                    img {
+                        box-shadow: 0 0 5px 3px rgba(213, 241, 193, 0.64) !important;
+                        .border-radius(50%) !important;
+                        .transition(0.6s);
+                        -webkit-transition: -webkit-transform 0.6s ease-out;
+                        transition: transform 0.6s ease-out;
+                        &:hover {
+                            .box-shadow(none) !important;
+                            .rotate(360deg);
+                        }
+                    }
+                }
+
+                .ds-comment-footer {
+                    margin-top: 15px !important;
+                }
+            }
+        }
+    }
+}

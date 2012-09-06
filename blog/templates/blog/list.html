@@ -1,5 +1,4 @@
 {% extends "blog/blog.html" %}
-{% load ezlog_tags %}
 
 {% block ext_javascripts %}
 {{block.super}}
@@ -21,19 +20,6 @@
           $('.pagination').pagination({{paginator.num_pages}}, {{current_page}}, '{{current_url|safe}}');
       });
   </script>
-  {% get_setting "DUOSHUO_SHORT_NAME" as DUOSHUO_SHORT_NAME %}
-  {% if DUOSHUO_SHORT_NAME %}
-  <script type="text/javascript">
-      var duoshuoQuery = {short_name:"{{DUOSHUO_SHORT_NAME}}"};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = 'http://static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-  </script>
-  {% endif %}
 {% endblock %}
 
 {% block bodyclass %}{{block.super}} list{% endblock %}

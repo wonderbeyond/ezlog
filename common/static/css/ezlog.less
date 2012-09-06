@@ -1,8 +1,10 @@
 @import "variables";
 @import "mixins";
 @import "responsive";
+@import "duoshuo-custom";
 
 @baseColor: #333;
+@baseBackgroundColor: #FEFEFE;
 
 .clear {
     clear: both;
@@ -13,7 +15,7 @@
 }
 
 body {
-    background-color: #FEFEFE;
+    background-color: @baseBackgroundColor;
     //background-image: url(/static/img/weibo.jpg);
     //background-repeat: no-repeat;
     //background-position: center;
@@ -89,11 +91,13 @@ body {
                     border: 1px solid #000;
                     #gradient .vertical(#EEE, #FEFEFE);
                     .border-radius(16px);
+                    .transition(width 0.4s ease-out);
 
                     &:focus, &.focus {
                         width: 120px;
                         border: 1px solid #333;
                         background: #FFF;
+                        .transition(width 0.2s ease-out);
                     }
                 }
                 button {
@@ -385,9 +389,7 @@ body {
                         list-style: none;
 
                         li {
-                            min-width: 49%;
-                            _width: 49%;
-                            float: left;
+                            line-height: 2em;
 
                             a {
                                 text-decoration: none;
@@ -398,8 +400,9 @@ body {
 
                 &.categroy, &.friend-links {
                     .panelbody li {
-                        font-size: 13px;
-                        line-height: 26px;
+                        min-width: 49%;
+                        _width: 49%;
+                        float: left;
                     }
                 }
 
@@ -408,8 +411,7 @@ body {
                         margin-right: -0.5em; // remove if bordered!!!
                         a {
                             display: inline-block;
-                            font-size: 12px;
-                            line-height: 20px;
+                            line-height: 1.5em;
                             padding: 0 1em 0 0;
                         }
                     }

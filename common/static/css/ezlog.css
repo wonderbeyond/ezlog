@@ -40,6 +40,81 @@
     display: none;
   }
 }
+.panel.recent-comments .panelbody {
+  padding-top: 0 !important;
+}
+.panel.recent-comments .panelbody ul.ds-recent-comments li.ds-comment {
+  border: 0 !important;
+}
+.panel.recent-comments .panelbody ul.ds-recent-comments li.ds-comment .ds-avatar img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.36);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.36);
+}
+.panel.recent-visitors .ds-recent-visitors .ds-avatar img {
+  border: 1px solid #CCC;
+  padding: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.ds-thread {
+  margin-top: 20px;
+}
+.ds-thread #ds-reset a:active {
+  top: 0 !important;
+}
+.ds-thread .ds-post,
+.ds-thread .ds-toolbar {
+  border-top: 0 !important;
+}
+.ds-thread .ds-post {
+  border: 0px !important;
+}
+.ds-thread .ds-post .ds-post-self .ds-post-main {
+  position: relative;
+  background: rgba(228, 245, 209, 0.38) !important;
+  padding: 15px 15px 10px 10px !important;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+.ds-thread .ds-post .ds-post-self .ds-post-main .ds-avatar {
+  position: relative;
+  padding: 3px !important;
+  background-color: #fefefe !important;
+  border: 1px solid #E7F3D8 !important;
+  border-radius: 50% !important;
+}
+.ds-thread .ds-post .ds-post-self .ds-post-main .ds-avatar img {
+  box-shadow: 0 0 5px 3px rgba(213, 241, 193, 0.64) !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition: -webkit-transform 0.6s ease-out;
+  transition: transform 0.6s ease-out;
+}
+.ds-thread .ds-post .ds-post-self .ds-post-main .ds-avatar img:hover {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.ds-thread .ds-post .ds-post-self .ds-post-main .ds-comment-footer {
+  margin-top: 15px !important;
+}
 .clear {
   clear: both;
 }
@@ -47,7 +122,7 @@
   outline: 0;
 }
 body {
-  background-color: #FEFEFE;
+  background-color: #fefefe;
 }
 .container {
   max-width: 1000px;
@@ -136,12 +211,20 @@ body {
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
   border-radius: 16px;
+  -webkit-transition: width 0.4s ease-out;
+  -moz-transition: width 0.4s ease-out;
+  -o-transition: width 0.4s ease-out;
+  transition: width 0.4s ease-out;
 }
 .container .header .global-nav .search-form input:focus,
 .container .header .global-nav .search-form input.focus {
   width: 120px;
   border: 1px solid #333;
   background: #FFF;
+  -webkit-transition: width 0.2s ease-out;
+  -moz-transition: width 0.2s ease-out;
+  -o-transition: width 0.2s ease-out;
+  transition: width 0.2s ease-out;
 }
 .container .header .global-nav .search-form button {
   display: none;
@@ -419,25 +502,23 @@ body {
   list-style: none;
 }
 .container .content-wrapper .sidebar .panel .panelbody ul li {
-  min-width: 49%;
-  _width: 49%;
-  float: left;
+  line-height: 2em;
 }
 .container .content-wrapper .sidebar .panel .panelbody ul li a {
   text-decoration: none;
 }
 .container .content-wrapper .sidebar .panel.categroy .panelbody li,
 .container .content-wrapper .sidebar .panel.friend-links .panelbody li {
-  font-size: 13px;
-  line-height: 26px;
+  min-width: 49%;
+  _width: 49%;
+  float: left;
 }
 .container .content-wrapper .sidebar .panel.tag-cloud .panelbody {
   margin-right: -0.5em;
 }
 .container .content-wrapper .sidebar .panel.tag-cloud .panelbody a {
   display: inline-block;
-  font-size: 12px;
-  line-height: 20px;
+  line-height: 1.5em;
   padding: 0 1em 0 0;
 }
 .container .content-wrapper .sidebar .panel.sina-weibo .panelbody {

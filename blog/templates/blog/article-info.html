@@ -14,5 +14,6 @@
     {% endfor %}
 </span>{% endif %}
 <span class="item"><i class="icon-comment"></i>
-    <span class="ds-thread-count" data-thread-key="blog.{{entry.pk}}">...</span>
+    <a class="ds-thread-count" data-thread-key="blog.{{entry.pk}}"
+        href="{{entry.get_absolute_url}}#comments">...</a>
 </span>

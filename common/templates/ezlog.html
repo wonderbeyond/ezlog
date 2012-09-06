@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load compress %}
+{% load ezlog_tags %}
 <!--[if IE 6]><html class="ie6 oldie"><![endif]-->
 <!--[if IE 7]><html class="ie7 oldie"><![endif]-->
 <!--[if IE 8]><html class="ie8 oldie"><![endif]-->
@@ -94,6 +95,8 @@
           {% include "panels/broadcast.html" %}
           {% include "panels/friend-links.html" %}
           {% include "panels/sina-weibo.html" %}
+          {% include "panels/ds-recent-comments.html" %}
+          {% include "panels/ds-recent-visitors.html" %}
         {% endblock sidebar %}
       </div> <!-- .sidebar -->
     </div>
@@ -106,5 +109,20 @@
         </div>
     </div>
   </div>
+  {% get_setting "DUOSHUO_SHORT_NAME" as DUOSHUO_SHORT_NAME %}
+  {% if DUOSHUO_SHORT_NAME %}
+  <!-- 备注: 文档加载后完成再加载多说脚本, 避免延缓页面的加载! -->
+  <script type="text/javascript">
+      window.duoshuoQuery = {short_name:"{{DUOSHUO_SHORT_NAME}}"};
+      (function() {
+          var ds = document.createElement('script');
+          ds.type = 'text/javascript';ds.async = true;
+          ds.src = 'http://static.duoshuo.com/embed.js';
+          ds.charset = 'UTF-8';
+          (document.getElementsByTagName('head')[0] 
+           || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+  </script>
+  {% endif %}
 </body>
 </html>

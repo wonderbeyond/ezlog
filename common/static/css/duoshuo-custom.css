@@ -1,0 +1,58 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.panel.recent-comments .panelbody {
+  padding-top: 0 !important;
+}
+.panel.recent-comments .panelbody ul.ds-recent-comments li.ds-comment {
+  border: 0 !important;
+}
+.panel.recent-comments .panelbody ul.ds-recent-comments li.ds-comment .ds-avatar img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.36);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.36);
+}
+.panel.recent-visitors .ds-recent-visitors .ds-avatar img {
+  border: 1px solid #CCC;
+  padding: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.ds-thread .ds-avatar img {
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+.ds-thread .ds-avatar img:hover {
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+}

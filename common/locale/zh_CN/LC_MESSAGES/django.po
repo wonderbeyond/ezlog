@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-06 15:24+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: templates/admin/_index.html:18
+msgid "Home"
+msgstr "首页"
+
+#: templates/admin/_index.html:39
+msgid "Add"
+msgstr ""
+
+#: templates/admin/_index.html:40
+msgid "Change"
+msgstr ""
+
+#: templates/admin/_index.html:47
+msgid "You don´t have permission to edit anything."
+msgstr ""
+
+#: templates/admin/_index.html:53
+msgid "EZLog设置"
+msgstr ""
+
+#: templates/admin/_index.html:59
+msgid "Recent Actions"
+msgstr ""
+
+#: templates/admin/_index.html:61
+msgid "My Actions"
+msgstr ""
+
+#: templates/admin/_index.html:64
+msgid "None available"
+msgstr ""
+
+msgid "Tags"
+msgstr "标签"
+
+msgid "Tag"
+msgstr "标签"
+
+msgid "EZLog Settings"
+msgstr "EZLog设置"
+
+msgid "EZLog Content Management"
+msgstr "EZLog内容管理"
+
+msgid "Django Administration"
+msgstr "Django管理"
+
+msgid "Media Management"
+msgstr "媒体管理"
+
+#: ezlog/dashboard.py:63
+msgid "Site Home"
+msgstr "站点首页"
+
+#: ezlog/dashboard.py:58
+msgid "Quick Links"
+msgstr "快速通道"
+
+#: ezlog/dashboard.py:68
+msgid "Plog"
+msgstr "图志"
+
+#: ezlog/dashboard.py:73
+msgid "EZLog official blog"
+msgstr "EZLog官方博客"
+
+msgid "Site Parameters"
+msgstr "站点参数"
+
+msgid "Nav and Links"
+msgstr "导航&链接"
+
+msgid "Feedback and Support"
+msgstr "反馈和支持"
+
+msgid "EZLog Author's Micro-blog"
+msgstr "EZLog作者微博"
+
+## For django-taggit
+msgid "A comma-separated list of tags."
+msgstr "英文逗号分割的标签列表。"

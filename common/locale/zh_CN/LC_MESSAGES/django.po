@@ -34,6 +34,15 @@ msgstr "EZLog管理"
 msgid "EZLog Settings"
 msgstr "EZLog设置"
 
+msgid "Import"
+msgstr "导入"
+
+msgid "Import Settings"
+msgstr "导入设置"
+
+msgid "Export Settings"
+msgstr "导出设置"
+
 msgid "Content Management"
 msgstr "内容管理"
 

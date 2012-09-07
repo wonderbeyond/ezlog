@@ -1,5 +1,7 @@
 ;"use strict";
+var DEBUG=true;
 if(!window.console){window.console={log:function(){}};}
+if(!DEBUG){window.console={log:function(){}};}
 
 // 简单的字符串格式化方法:
 // Example: "{0}, {1}".format("Hello", "world");
@@ -11,12 +13,17 @@ String.prototype.format = function() {
                         } );
 };
 
+function baseURL(url) {
+    return url.replace(/#.*$/, '')
+              .replace(/^\//, '').replace(/\/$/, '');
+}
+
 jQuery.extend({
     scrollTo: function($elem, duration) {
         // (垂直)滚动到指定元素位置
         // Usage: $.scrollTo($('selector'))
         if(!duration) {
-            duration = "fase";
+            duration = "fast";
         }
         var offset = $elem.offset();
         if( jQuery.browser.webkit || jQuery.browser.mozilla ) {
@@ -199,6 +206,18 @@ $(document).ready(function(){
 
     $('.global-nav .toggle-button').click(function(){
         $('.global-nav').toggleClass('horizontal').toggleClass('vertical');
+    });
+
+    // 页内链接平滑滚动到目标
+    $('a[href*=#]').each(function(){
+        if(this.hash.slice(1) && baseURL(this.href) == baseURL(location.href)) {
+            $(this).bind('click', function(){
+                console.log("local link clicked");
+                $(this.hash).locate(800);
+                location.hash = this.hash;
+                return false;
+            });
+        }
     });
 });
 

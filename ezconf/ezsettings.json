@@ -1,0 +1,73 @@
+[
+    {
+        "fields": [
+            {
+                "type": "text", 
+                "verbose_name": "站点标题", 
+                "name": "site_title", 
+                "value": "潇洒走一回"
+            }, 
+            {
+                "type": "text", 
+                "verbose_name": "站点箴言", 
+                "name": "site_motto", 
+                "value": "work wonders tegether~", 
+                "desc": "以标语形式显示在站点标题附近"
+            }, 
+            {
+                "type": "longtext", 
+                "verbose_name": "公告信息", 
+                "name": "broadcast", 
+                "value": "请在后台管理界面修改公告信息.", 
+                "desc": "用于显示在公告板中"
+            }, 
+            {
+                "type": "text", 
+                "verbose_name": "主题名称", 
+                "name": "theme_name", 
+                "value": "保留以后使用", 
+                "desc": "请输入要使用的主题名称"
+            }
+        ], 
+        "verbose_name": "一般配置", 
+        "name": "common"
+    }, 
+    {
+        "fields": [
+            {
+                "type": "number", 
+                "verbose_name": "每页显示文章数", 
+                "name": "articles_per_page", 
+                "value": "8"
+            }
+        ], 
+        "verbose_name": "博客设置", 
+        "name": "blog"
+    }, 
+    {
+        "fields": [
+            {
+                "type": "text", 
+                "verbose_name": "微博挂件iframe地址", 
+                "name": "widget_iframe_src", 
+                "value": "http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=800&fansRow=1&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=1&uid=1867578073&verifier=81cd8ab8&dpc=1", 
+                "desc": "请到微博秀定制页面: http://app.weibo.com/tool/weiboshow 获取自己的新浪微博挂件代码, 并提取代码中的src属性值粘贴在这里."
+            }
+        ], 
+        "verbose_name": "新浪微博相关", 
+        "name": "sina_weibo"
+    }, 
+    {
+        "fields": [
+            {
+                "type": "text", 
+                "verbose_name": "多说短域名", 
+                "name": "shot_name", 
+                "value": "your_short_name_got_from_duoshuo.com", 
+                "desc": "短域名用来标记该站点的评论, 请到多说网(http://duoshuo.com/create-site/)为该站点创建一个短域名."
+            }
+        ], 
+        "verbose_name": "多说评论系统", 
+        "name": "duoshuo"
+    }
+]

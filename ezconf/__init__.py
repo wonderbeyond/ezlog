@@ -47,7 +47,8 @@ class EZSettings(object):
 
     def as_json(self):
         # return a unicode instance.
-        return json.dumps(self._settings, ensure_ascii=True, indent=4)
+        return json.dumps(self._settings, ensure_ascii=True)
+
 
     def as_form(self):
         pass
@@ -56,6 +57,15 @@ class EZSettings(object):
         settings_data = EZSettingsData.objects.get(pk=1)
         settings_data.data = self.as_json().encode('utf-8')
         settings_data.save()
+
+    def as_readable_json(self):
+        return json.dumps(self._settings, ensure_ascii=False,
+                          indent=4)
+
+    def reset_settings_with_json_data(self, data):
+        '''使用data中提供的json数据覆盖当前settings'''
+        self._settings = json.loads(data)
+        self.save()
 
 try:
     from django.db.utils import DatabaseError

@@ -1,4 +1,5 @@
 # coding='utf-8'
+from django.utils.translation import ugettext_lazy as _
 import os
 
 PROJECT_ROOT = os.path.abspath( os.path.dirname(os.path.dirname(__file__)) )
@@ -283,5 +284,5 @@ CKEDITOR_CONFIGS = {
 }
 
 GRAPPELLI_INDEX_DASHBOARD = 'ezlog.dashboard.CustomIndexDashboard'
-GRAPPELLI_ADMIN_TITLE = u'EZLog\u7ad9\u70b9\u7ba1\u7406'
+GRAPPELLI_ADMIN_TITLE = _('EZLog Management')
 DUOSHUO_SHORT_NAME = ''

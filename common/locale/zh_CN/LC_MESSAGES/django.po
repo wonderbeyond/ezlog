@@ -22,45 +22,20 @@ msgstr ""
 msgid "Home"
 msgstr "首页"
 
-#: templates/admin/_index.html:39
-msgid "Add"
-msgstr ""
-
-#: templates/admin/_index.html:40
-msgid "Change"
-msgstr ""
-
-#: templates/admin/_index.html:47
-msgid "You don´t have permission to edit anything."
-msgstr ""
-
-#: templates/admin/_index.html:53
-msgid "EZLog设置"
-msgstr ""
-
-#: templates/admin/_index.html:59
-msgid "Recent Actions"
-msgstr ""
-
-#: templates/admin/_index.html:61
-msgid "My Actions"
-msgstr ""
-
-#: templates/admin/_index.html:64
-msgid "None available"
-msgstr ""
-
 msgid "Tags"
 msgstr "标签"
 
 msgid "Tag"
 msgstr "标签"
 
+msgid "EZLog Management"
+msgstr "EZLog管理"
+
 msgid "EZLog Settings"
 msgstr "EZLog设置"
 
-msgid "EZLog Content Management"
-msgstr "EZLog内容管理"
+msgid "Content Management"
+msgstr "内容管理"
 
 msgid "Django Administration"
 msgstr "Django管理"

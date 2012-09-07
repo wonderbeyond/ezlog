@@ -24,7 +24,7 @@ class CustomIndexDashboard(Dashboard):
         
         # append an app list module for "Applications"
         self.children.append(modules.AppList(
-            _('EZLog Content Management'),
+            _('Content Management'),
             collapsible=True,
             column=1,
             css_classes=('collapse closed',),

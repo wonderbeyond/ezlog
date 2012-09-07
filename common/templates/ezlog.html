@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load compress %}
-{% load ezlog_tags %}
 <!--[if IE 6]><html class="ie6 oldie"><![endif]-->
 <!--[if IE 7]><html class="ie7 oldie"><![endif]-->
 <!--[if IE 8]><html class="ie8 oldie"><![endif]-->
@@ -109,11 +108,9 @@
         </div>
     </div>
   </div>
-  {% get_setting "DUOSHUO_SHORT_NAME" as DUOSHUO_SHORT_NAME %}
-  {% if DUOSHUO_SHORT_NAME %}
   <!-- 备注: 文档加载后完成再加载多说脚本, 避免延缓页面的加载! -->
   <script type="text/javascript">
-      window.duoshuoQuery = {short_name:"{{DUOSHUO_SHORT_NAME}}"};
+      window.duoshuoQuery = {short_name:"{{ezsettings.duoshuo.shot_name}}"};
       (function() {
           var ds = document.createElement('script');
           ds.type = 'text/javascript';ds.async = true;
@@ -123,6 +120,5 @@
            || document.getElementsByTagName('body')[0]).appendChild(ds);
       })();
   </script>
-  {% endif %}
 </body>
 </html>

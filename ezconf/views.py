@@ -19,14 +19,14 @@ from ezconf.models import *
 def index(request):
     context = {
         'settings': ezsettings.settings,
-        'title': _('EZLog settings'),
+        'title': _('EZLog Settings'),
     }
     return render_to_response('ezconf/index.html', context,
                              context_instance=RequestContext(request))
 
 @staff_member_required
 @require_POST
-def save(request):
+def save_settings(request):
     '''save settings from user form'''
     for g in ezsettings.settings:
         for f in g['fields']:
@@ -48,3 +48,22 @@ def get_nav_page(request, pid):
     }
     return render_to_response('ezconf/nav-page.html', context,
                               context_instance=RequestContext(request))
+
+@staff_member_required
+def export_settings(request):
+    return HttpResponse(ezsettings.as_readable_json(),
+                        content_type='application/json')
+    
+@staff_member_required
+def import_settings(request):
+    from forms import ImportSettingsForm
+    title = _('Import Settings')
+    if request.method == 'POST':
+        form = ImportSettingsForm(request.POST, request.FILES)
+        if form.is_valid():
+            ezsettings.reset_settings_with_json_data(request.FILES['file'].read())
+            return HttpResponseRedirect(reverse('ezconf.index'))
+    else:
+        form = ImportSettingsForm()
+    return render_to_response('ezconf/import_settings.html', locals(),
+                             context_instance=RequestContext(request))    

@@ -1,5 +1,5 @@
 {% load i18n %}
-<form method="post" action="{% url ezconf.save %}">{% csrf_token %}
+<form method="post" action="{% url ezconf.save_settings %}">{% csrf_token %}
 {% for group in settings %}
 <fieldset class="grp-module" data-group="{{group.name}}">
   <h2 class="grp-collapse-handler">{{group.verbose_name}}</h2>

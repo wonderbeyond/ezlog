@@ -56,7 +56,18 @@ class CustomIndexDashboard(Dashboard):
                 'title': _('Site Parameters'),
                 'url': reverse('ezconf.index'),
                 'external': False,
-            }]
+            },
+            {
+                'title': _('Export Settings'),
+                'url': reverse('ezconf.export_settings'),
+                'external': False,
+            },
+            {
+                'title': _('Import Settings'),
+                'url': reverse('ezconf.import_settings'),
+                'external': False,
+            }
+            ]
         ))
         
         # append another link list module for "support".

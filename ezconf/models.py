@@ -4,11 +4,15 @@ from pages.models import Page
 
 class NavPage(models.Model):
     title = models.CharField(verbose_name=u'标题', max_length=50, unique=True)
-    page = models.ForeignKey(Page, verbose_name=u'页面')
+    content = models.TextField(verbose_name=u'内容')
 
     class Meta:
         verbose_name = u'导航页面'
         verbose_name_plural = u'导航页面'
+
+    @models.permalink
+    def get_absolute_url(self):
+        return('navpage.get', [str(self.id)])
 
     def __unicode__(self):
         return self.title

@@ -74,8 +74,8 @@
                 <ul class="nav-links">
                     <li><a href="{% url site.index %}">首页</a></li>
                     <li><a href="{% url plog.index %}">图志</a></li>
-                    {% for P in nav_pages %}
-                        <li class="more"><a href={{P.page.get_absolute_url}}>{{P.title}}</a></li>
+                    {% for p in nav_pages %}
+                        <li class="more"><a href={{p.get_absolute_url}}>{{p.title}}</a></li>
                     {% endfor %}
                 </ul> <!-- .nav-links -->
                 {% endblock global_nav %}

@@ -11,6 +11,8 @@ from django.views.decorators.http import require_POST, require_GET
 
 from ezconf import ezsettings
 
+from ezconf.models import *
+
 @staff_member_required
 @never_cache
 @require_GET
@@ -38,3 +40,11 @@ def save(request):
         redirect_to = reverse('admin:index')
 
     return HttpResponseRedirect(redirect_to)
+
+def get_nav_page(request, pid):
+    page = get_object_or_404(NavPage, pk=pid)
+    context = {
+        'page': page,
+    }
+    return render_to_response('ezconf/nav-page.html', context,
+                              context_instance=RequestContext(request))

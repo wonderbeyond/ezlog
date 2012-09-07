@@ -39,7 +39,7 @@ DB_MYSQL = {
 }
 
 DATABASES = {
-    'default': DB_SQLITE3,
+    'default': DB_MYSQL,
 }
 
 CACHES = {

@@ -25,7 +25,10 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (max-width: 560px) {
+@media (max-width: 470px) {
+  body {
+    padding: 0 10px;
+  }
   .global-nav.horizontal li.more {
     display: none;
   }
@@ -114,6 +117,105 @@
 }
 .ds-thread .ds-post .ds-post-self .ds-post-main .ds-comment-footer {
   margin-top: 15px !important;
+}
+@media (max-width: 600px) {
+  #ds-wrapper {
+    top: 20px !important;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login {
+    width: 95% !important;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body {
+    height: auto !important;
+    padding: 10px !important;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left,
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right {
+    width: 100% !important;
+    position: static !important;
+    float: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    clear: both !important;
+    *zoom: 1;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left:before,
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right:before,
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left:after,
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left:after,
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right:after {
+    clear: both;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left h2,
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right h2 {
+    margin: 0 0 8px 0 !important;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left .ds-service-list {
+    float: left !important;
+    width: auto !important;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left .ds-service-list li {
+    float: left !important;
+    margin: 6px 8px 6px 0 !important;
+    padding: 0 !important;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right {
+    margin: 15px 0 0 0 !important;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right form {
+    width: auto !important;
+    margin: 5px 0 0 !important;
+    padding: 0 !important;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right form .ds-input {
+    position: relative !important;
+    width: 80% !important;
+    height: 30px !important;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right form .ds-input input {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    padding: 5px !important;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right form .ds-input label {
+    position: absolute !important;
+    right: 0 !important;
+    line-height: 20px !important;
+    font-size: 14px !important;
+    top: 5px !important;
+    -webkit-transition: visibility 0.6s linear;
+    -moz-transition: visibility 0.6s linear;
+    -o-transition: visibility 0.6s linear;
+    transition: visibility 0.6s linear;
+  }
+  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right form .ds-input input:focus + label {
+    visibility: hidden !important;
+    -webkit-transition: visibility 0.6s linear;
+    -moz-transition: visibility 0.6s linear;
+    -o-transition: visibility 0.6s linear;
+    transition: visibility 0.6s linear;
+  }
+  .ds-replybox-main .ds-textarea-wrapper {
+    padding: 0 !important;
+    height: 80px !important;
+  }
+  .ds-replybox-main .ds-textarea-wrapper textarea {
+    width: 95% !important;
+    height: 90% !important;
+    padding: 8px 6px 0 6px !important;
+  }
+  .ds-replybox-main .ds-post-toolbar .ds-post-options span.ds-sync {
+    display: none !important;
+  }
 }
 .clear {
   clear: both;

@@ -77,3 +77,106 @@
         }
     }
 }
+
+
+@media (max-width: 600px) {
+    // 针对移动设备调整多说样式.
+    #ds-wrapper {
+        top: 20px !important;
+        .ds-dialog.ds-dialog-login {
+            width: 95% !important;
+
+            .ds-dialog-body {
+                height: auto !important;
+                padding: 10px !important;
+
+                .ds-dialog-left, .ds-dialog-right {
+                    width: 100% !important;
+                    position: static !important;
+                    float: none !important;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                    border: 0 !important;
+                    clear: both !important;
+                    .clearfix();
+                    h2 {
+                        margin: 0 0 8px 0 !important;
+                    }
+                }
+                .ds-dialog-left {
+                    .ds-service-list {
+                        float: left !important;
+                        width: auto !important;
+
+                        li {
+                            float: left !important;
+                            margin: 6px 8px 6px 0 !important;
+                            padding: 0 !important;
+                        }
+                    }
+                }
+                .ds-dialog-right {
+                    margin: 15px 0 0 0 !important;
+                    form {
+                        width: auto !important;
+                        margin: 5px 0 0 !important;
+                        padding: 0 !important;
+
+                        .ds-input {
+                            position: relative !important;
+                            width: 80% !important;
+                            height: 30px !important;
+                            input {
+                                width: 100% !important;
+                                padding: 0 !important;
+                                margin: 0 !important;
+                                height: 20px !important;
+                                line-height: 20px !important;
+                                padding: 5px !important;
+                            }
+                            label {
+                                position: absolute !important;
+                                right: 0 !important;
+                                line-height: 20px !important;
+                                font-size: 14px !important;
+                                top: 5px !important;
+                                .transition(visibility 0.6s linear);
+                            }
+                            input:focus+label {
+                                visibility: hidden !important;
+                                .transition(visibility 0.6s linear);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ds-dialog-close {
+                //TODO: 关闭按钮太小, 很难点击到.
+            }
+        }
+    }
+
+    .ds-replybox-main {
+        .ds-textarea-wrapper {
+            // 点击发布按钮很容易误入输入框, 
+            padding: 0 !important;
+            height: 80px !important;
+            textarea {
+                // 原来textarea都要溢出框外了,
+                // 怪不得发布按钮那么大, 还是容易点进输入框!
+                width: 95% !important;
+                height: 90% !important;
+                padding: 8px 6px 0 6px !important;
+            }
+        }
+
+        .ds-post-toolbar {
+            .ds-post-options {
+                span.ds-sync {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

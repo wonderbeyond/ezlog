@@ -1,4 +1,4 @@
-;"use strict";
+"use strict";
 var DEBUG=true;
 if(!window.console){window.console={log:function(){}};}
 if(!DEBUG){window.console={log:function(){}};}
@@ -76,6 +76,7 @@ function plain2html(text) {
     var doHangOut = function() {
         // 图片加载后...
         $img.data('src-node').removeClass('loading');
+        $img.removeClass('loading');
         console.log('Now hang out!');
 
         var scrollTop = $(document).scrollTop();
@@ -120,14 +121,26 @@ function plain2html(text) {
         return this.click(function() {
             var $srcNode = $(this);
             var origSrc = $srcNode.data('orig-src') || $srcNode.attr('src');
+
+            if($(window).width() < 768 || $.browser.msie) {
+                // 对于窄屏幕设备和低端浏览器, 直接打开原始图片.
+                location.href = origSrc;
+                return false;
+            }
+
             $img.data('src-node', $srcNode);
 
-            if($hungOut.find('img').attr('src') == origSrc) {
-                console.log("Just re display");
-                doHangOut();
+            if($img.attr('src') == origSrc) {
+                if($img.hasClass('loading')) {
+                    console.log('Still loading. Wait.');
+                } else {
+                    console.log("Just re display");
+                    doHangOut();
+                }
             } else {
                 console.log('loading...');
                 $srcNode.addClass('loading');
+                $img.addClass('loading');
                 settings.loadingCallback();
                 $img.attr('src', origSrc);
             }

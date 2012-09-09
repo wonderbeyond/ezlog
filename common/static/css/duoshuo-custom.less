@@ -1,182 +1,258 @@
-.panel.recent-comments {
-    .panelbody {
-        // 因为多说评论列表的第一个li的有了padding-top
-        padding-top: 0 !important;
-        ul.ds-recent-comments {
-            li.ds-comment {
-                border: 0 !important;
-                .ds-avatar {
-                    img {
-                        .border-radius(5px);
-                        .box-shadow(0 1px 2px rgba(0, 0, 0, 0.36));
-                    }
-                }
-            }
-        }
-    }
-}
-
-.panel.recent-visitors {
-    .ds-recent-visitors {
-        .ds-avatar {
-            img {
-                border: 1px solid #CCC;
-                padding: 1px;
-                .border-radius(2px);
-            }
-        }
-    }
-}
-
-.ds-thread {
-    margin-top: 20px;
-    #ds-reset {
-        a:active {
-            top: 0 !important;
-        }
-        .ds-highlight{}
-    }
-    .ds-post, .ds-toolbar {
-        border-top: 0 !important;
-    }
-
-    .ds-post {
-        border: 0px !important;
-        .ds-post-self {
-            .ds-post-main {
-                position: relative;
-                background: rgba(228, 245, 209, 0.38) !important;
-                padding: 15px 15px 10px 10px !important;
-                .border-radius(5px);
-                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.75);
-
-                .ds-avatar {
-                    position: relative;
-                    padding: 3px !important;
-                    background-color: @baseBackgroundColor !important;
-                    border: 1px solid #E7F3D8 !important;
-                    border-radius: 50% !important;
-                    img {
-                        box-shadow: 0 0 5px 3px rgba(213, 241, 193, 0.64) !important;
-                        .border-radius(50%) !important;
-                        .transition(0.6s);
-                        -webkit-transition: -webkit-transform 0.6s ease-out;
-                        transition: transform 0.6s ease-out;
-                        &:hover {
-                            .box-shadow(none) !important;
-                            .rotate(360deg);
+#sidebar {
+    .panel.recent-comments {
+        .panelbody {
+            // 因为多说评论列表的第一个li的有了padding-top
+            ul#ds-recent-comments {
+                li.ds-comment {
+                    border: 0;
+                    .ds-avatar {
+                        img {
+                            .border-radius(5px);
+                            .box-shadow(0 1px 2px rgba(0, 0, 0, 0.36));
                         }
                     }
+                    &:first-child {
+                        margin-top: 0 !important;
+                    }
                 }
+            }
+        }
+    }
 
-                .ds-comment-footer {
-                    margin-top: 15px !important;
+    .panel.recent-visitors {
+        #ds-recent-visitors {
+            .ds-avatar {
+                img {
+                    border: 1px solid #CCC;
+                    padding: 1px;
+                    .border-radius(2px);
                 }
             }
         }
     }
 }
 
+
+#comments {
+    #ds-thread #ds-reset {
+        margin-top: 20px;
+        #ds-reset {
+            a:active {
+                top: 0 !important;
+            }
+            .ds-highlight{}
+        }
+        .ds-post, .ds-toolbar {
+            border-top: 0 !important;
+        }
+
+        .ds-comments .ds-post {
+            border: 0px !important;
+            .ds-post-self {
+                .ds-post-main {
+                    position: relative;
+                    background: rgba(228, 245, 209, 0.38) !important;
+                    padding: 15px 15px 10px 10px !important;
+                    .border-radius(5px);
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+
+                    .ds-avatar {
+                        position: relative;
+                        padding: 3px !important;
+                        background-color: @baseBackgroundColor !important;
+                        border: 1px solid #E7F3D8 !important;
+                        border-radius: 50% !important;
+                        img {
+                            box-shadow: 0 0 5px 3px rgba(213, 241, 193, 0.64) !important;
+                            .border-radius(50%) !important;
+                            .transition(0.6s);
+                            -webkit-transition: -webkit-transform 0.6s ease-out;
+                            transition: transform 0.6s ease-out;
+                            &:hover {
+                                .box-shadow(none) !important;
+                                .rotate(360deg);
+                            }
+                        }
+                    }
+
+                    .ds-comment-footer {
+                        margin-top: 15px !important;
+                    }
+                }
+            }
+        }
+
+        .ds-login-buttons {
+            // 输入框上方的社交登陆按钮
+            .clearfix();
+            margin: 10px 0;
+            padding: 0;
+            border: 0;
+            ul.ds-service-list {
+                height: auto;
+            }
+            p, li {
+                line-height: 2em !important;
+            }
+        }
+    }
+}
+
+
+#ds-wrapper {
+    #ds-reset {
+
+    }
+}
 
 @media (max-width: 600px) {
     // 针对移动设备调整多说样式.
     #ds-wrapper {
-        top: 20px !important;
-        .ds-dialog.ds-dialog-login {
+        // 优化多数对话框
+        top: 6px !important;
+        #ds-reset.ds-dialog {
             width: 95% !important;
-
-            .ds-dialog-body {
-                height: auto !important;
-                padding: 10px !important;
-
-                .ds-dialog-left, .ds-dialog-right {
-                    width: 100% !important;
-                    position: static !important;
-                    float: none !important;
-                    padding: 0 !important;
-                    margin: 0 !important;
-                    border: 0 !important;
-                    clear: both !important;
-                    .clearfix();
-                    h2 {
-                        margin: 0 0 8px 0 !important;
-                    }
-                }
-                .ds-dialog-left {
-                    .ds-service-list {
-                        float: left !important;
-                        width: auto !important;
-
-                        li {
-                            float: left !important;
-                            margin: 6px 8px 6px 0 !important;
-                            padding: 0 !important;
-                        }
-                    }
-                }
-                .ds-dialog-right {
-                    margin: 15px 0 0 0 !important;
-                    form {
-                        width: auto !important;
-                        margin: 5px 0 0 !important;
-                        padding: 0 !important;
-
-                        .ds-input {
-                            position: relative !important;
-                            width: 80% !important;
-                            height: 30px !important;
-                            input {
-                                width: 100% !important;
-                                padding: 0 !important;
-                                margin: 0 !important;
-                                height: 20px !important;
-                                line-height: 20px !important;
-                                padding: 5px !important;
-                            }
-                            label {
-                                position: absolute !important;
-                                right: 0 !important;
-                                line-height: 20px !important;
-                                font-size: 14px !important;
-                                top: 5px !important;
-                                .transition(visibility 0.6s linear);
-                            }
-                            input:focus+label {
-                                visibility: hidden !important;
-                                .transition(visibility 0.6s linear);
-                            }
-                        }
-                    }
-                }
-            }
 
             .ds-dialog-close {
                 //TODO: 关闭按钮太小, 很难点击到.
             }
+
+            &.ds-dialog-login {
+                .ds-dialog-inner {
+                    .ds-dialog-body {
+                        height: auto !important;
+                        padding: 6px !important;
+
+                        .ds-dialog-left, .ds-dialog-right {
+                            width: 100% !important;
+                            position: static !important;
+                            float: none !important;
+                            padding: 0 !important;
+                            margin: 0 !important;
+                            border: 0 !important;
+                            clear: both !important;
+                            .clearfix();
+                            h2 {
+                                margin: 0 0 8px 0 !important;
+                            }
+                        }
+
+                        .ds-dialog-left {
+                            .ds-service-list {
+                                float: left !important;
+                                width: auto !important;
+
+                                li {
+                                    float: left !important;
+                                    margin: 0 6px 0 0 !important;
+                                    padding: 3px 0 !important;
+                                }
+                            }
+                        }
+
+                        .ds-dialog-right {
+                            margin: 8px 0 0 0 !important;
+                            form {
+                                width: auto !important;
+                                margin: 5px 0 0 !important;
+                                padding: 0 !important;
+
+                                .ds-input {
+                                    position: relative !important;
+                                    width: 80% !important;
+                                    height: 24px !important;
+                                    margin: 0 0 6px;
+                                    input {
+                                        width: 100% !important;
+                                        padding: 0 !important;
+                                        margin: 0 !important;
+                                        height: 20px !important;
+                                        line-height: 20px !important;
+                                        padding: 2px !important;
+                                    }
+                                    label {
+                                        position: absolute !important;
+                                        right: 0; top: 0;
+                                        line-height: 24px !important;
+                                        font-size: 14px !important;
+                                        .transition(visibility 0.6s linear);
+                                    }
+                                    input:focus+label {
+                                        visibility: hidden !important;
+                                        .transition(visibility 0.6s linear);
+                                    }
+                                }
+
+                                button {
+                                    font-size: 14px;
+                                    width: 60px;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    margin: 8px 0 3px 0;
+                                }
+                            }
+                        }
+                    }
+
+                    .ds-dialog-footer {
+                        display: none;
+                    }
+
+                    .ds-dialog-close {
+                        position: absolute;
+                        top: 6px; right: 6px;
+                        display: inline-block;
+                        // 扩大可响应范围, 13px太小了!
+                        width: 20px;
+                        height: 20px;
+                        padding: 2px;
+                        .border-radius(50%);
+                        background: #E44E58;
+
+                        &:after {
+                            display: inline-block;
+                            content: "×";
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 20px;
+                            text-align: center;
+                            color: #000;
+                            text-shadow: 0 0 5px 3px #FFF;
+                        }
+                    }
+                }
+
+            }
         }
     }
 
-    .ds-replybox-main {
-        .ds-textarea-wrapper {
-            // 点击发布按钮很容易误入输入框, 
-            padding: 0 !important;
-            height: 80px !important;
-            textarea {
-                // 原来textarea都要溢出框外了,
-                // 怪不得发布按钮那么大, 还是容易点进输入框!
-                width: 95% !important;
-                height: 90% !important;
-                padding: 8px 6px 0 6px !important;
-            }
-        }
+    #comments #ds-thread #ds-reset {
 
-        .ds-post-toolbar {
-            .ds-post-options {
-                span.ds-sync {
-                    display: none !important;
+        // 优化多说的评论输入框
+        .ds-replybox-main {
+            .ds-textarea-wrapper {
+                // 点击发布按钮很容易误入输入框, 
+                padding: 0 !important;
+                height: 80px !important;
+                textarea {
+                    // 原来textarea都要溢出框外了,
+                    // 怪不得发布按钮那么大, 还是容易点进输入框!
+                    width: 95% !important;
+                    height: 90% !important;
+                    padding: 8px 6px 0 6px !important;
                 }
             }
+
+            .ds-post-toolbar {
+                .ds-post-options {
+                    span.ds-sync {
+                        display: none !important;
+                    }
+                }
+            }
+
         }
     }
 }

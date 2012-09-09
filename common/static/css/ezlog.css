@@ -43,13 +43,10 @@
     display: none;
   }
 }
-.panel.recent-comments .panelbody {
-  padding-top: 0 !important;
+#sidebar .panel.recent-comments .panelbody ul#ds-recent-comments li.ds-comment {
+  border: 0;
 }
-.panel.recent-comments .panelbody ul.ds-recent-comments li.ds-comment {
-  border: 0 !important;
-}
-.panel.recent-comments .panelbody ul.ds-recent-comments li.ds-comment .ds-avatar img {
+#sidebar .panel.recent-comments .panelbody ul#ds-recent-comments li.ds-comment .ds-avatar img {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -57,27 +54,30 @@
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.36);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.36);
 }
-.panel.recent-visitors .ds-recent-visitors .ds-avatar img {
+#sidebar .panel.recent-comments .panelbody ul#ds-recent-comments li.ds-comment:first-child {
+  margin-top: 0 !important;
+}
+#sidebar .panel.recent-visitors #ds-recent-visitors .ds-avatar img {
   border: 1px solid #CCC;
   padding: 1px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-.ds-thread {
+#comments #ds-thread #ds-reset {
   margin-top: 20px;
 }
-.ds-thread #ds-reset a:active {
+#comments #ds-thread #ds-reset #ds-reset a:active {
   top: 0 !important;
 }
-.ds-thread .ds-post,
-.ds-thread .ds-toolbar {
+#comments #ds-thread #ds-reset .ds-post,
+#comments #ds-thread #ds-reset .ds-toolbar {
   border-top: 0 !important;
 }
-.ds-thread .ds-post {
+#comments #ds-thread #ds-reset .ds-comments .ds-post {
   border: 0px !important;
 }
-.ds-thread .ds-post .ds-post-self .ds-post-main {
+#comments #ds-thread #ds-reset .ds-comments .ds-post .ds-post-self .ds-post-main {
   position: relative;
   background: rgba(228, 245, 209, 0.38) !important;
   padding: 15px 15px 10px 10px !important;
@@ -86,14 +86,14 @@
   border-radius: 5px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
-.ds-thread .ds-post .ds-post-self .ds-post-main .ds-avatar {
+#comments #ds-thread #ds-reset .ds-comments .ds-post .ds-post-self .ds-post-main .ds-avatar {
   position: relative;
   padding: 3px !important;
   background-color: #fefefe !important;
   border: 1px solid #E7F3D8 !important;
   border-radius: 50% !important;
 }
-.ds-thread .ds-post .ds-post-self .ds-post-main .ds-avatar img {
+#comments #ds-thread #ds-reset .ds-comments .ds-post .ds-post-self .ds-post-main .ds-avatar img {
   box-shadow: 0 0 5px 3px rgba(213, 241, 193, 0.64) !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -105,7 +105,7 @@
   -webkit-transition: -webkit-transform 0.6s ease-out;
   transition: transform 0.6s ease-out;
 }
-.ds-thread .ds-post .ds-post-self .ds-post-main .ds-avatar img:hover {
+#comments #ds-thread #ds-reset .ds-comments .ds-post .ds-post-self .ds-post-main .ds-avatar img:hover {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
@@ -115,22 +115,44 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-.ds-thread .ds-post .ds-post-self .ds-post-main .ds-comment-footer {
+#comments #ds-thread #ds-reset .ds-comments .ds-post .ds-post-self .ds-post-main .ds-comment-footer {
   margin-top: 15px !important;
+}
+#comments #ds-thread #ds-reset .ds-login-buttons {
+  *zoom: 1;
+  margin: 10px 0;
+  padding: 0;
+  border: 0;
+}
+#comments #ds-thread #ds-reset .ds-login-buttons:before,
+#comments #ds-thread #ds-reset .ds-login-buttons:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+#comments #ds-thread #ds-reset .ds-login-buttons:after {
+  clear: both;
+}
+#comments #ds-thread #ds-reset .ds-login-buttons ul.ds-service-list {
+  height: auto;
+}
+#comments #ds-thread #ds-reset .ds-login-buttons p,
+#comments #ds-thread #ds-reset .ds-login-buttons li {
+  line-height: 2em !important;
 }
 @media (max-width: 600px) {
   #ds-wrapper {
-    top: 20px !important;
+    top: 6px !important;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login {
+  #ds-wrapper #ds-reset.ds-dialog {
     width: 95% !important;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body {
     height: auto !important;
-    padding: 10px !important;
+    padding: 6px !important;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left,
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-left,
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right {
     width: 100% !important;
     position: static !important;
     float: none !important;
@@ -140,80 +162,115 @@
     clear: both !important;
     *zoom: 1;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left:before,
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right:before,
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left:after,
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right:after {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-left:before,
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right:before,
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-left:after,
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right:after {
     display: table;
     content: "";
     line-height: 0;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left:after,
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right:after {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-left:after,
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right:after {
     clear: both;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left h2,
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right h2 {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-left h2,
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right h2 {
     margin: 0 0 8px 0 !important;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left .ds-service-list {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-left .ds-service-list {
     float: left !important;
     width: auto !important;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-left .ds-service-list li {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-left .ds-service-list li {
     float: left !important;
-    margin: 6px 8px 6px 0 !important;
-    padding: 0 !important;
+    margin: 0 6px 0 0 !important;
+    padding: 3px 0 !important;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right {
-    margin: 15px 0 0 0 !important;
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right {
+    margin: 8px 0 0 0 !important;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right form {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right form {
     width: auto !important;
     margin: 5px 0 0 !important;
     padding: 0 !important;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right form .ds-input {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right form .ds-input {
     position: relative !important;
     width: 80% !important;
-    height: 30px !important;
+    height: 24px !important;
+    margin: 0 0 6px;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right form .ds-input input {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right form .ds-input input {
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
     height: 20px !important;
     line-height: 20px !important;
-    padding: 5px !important;
+    padding: 2px !important;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right form .ds-input label {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right form .ds-input label {
     position: absolute !important;
-    right: 0 !important;
-    line-height: 20px !important;
+    right: 0;
+    top: 0;
+    line-height: 24px !important;
     font-size: 14px !important;
-    top: 5px !important;
     -webkit-transition: visibility 0.6s linear;
     -moz-transition: visibility 0.6s linear;
     -o-transition: visibility 0.6s linear;
     transition: visibility 0.6s linear;
   }
-  #ds-wrapper .ds-dialog.ds-dialog-login .ds-dialog-body .ds-dialog-right form .ds-input input:focus + label {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right form .ds-input input:focus + label {
     visibility: hidden !important;
     -webkit-transition: visibility 0.6s linear;
     -moz-transition: visibility 0.6s linear;
     -o-transition: visibility 0.6s linear;
     transition: visibility 0.6s linear;
   }
-  .ds-replybox-main .ds-textarea-wrapper {
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-body .ds-dialog-right form button {
+    font-size: 14px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    margin: 8px 0 3px 0;
+  }
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-footer {
+    display: none;
+  }
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #E44E58;
+  }
+  #ds-wrapper #ds-reset.ds-dialog.ds-dialog-login .ds-dialog-inner .ds-dialog-close:after {
+    display: inline-block;
+    content: "×";
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    text-shadow: 0 0 5px 3px #FFF;
+  }
+  #comments #ds-thread #ds-reset .ds-replybox-main .ds-textarea-wrapper {
     padding: 0 !important;
     height: 80px !important;
   }
-  .ds-replybox-main .ds-textarea-wrapper textarea {
+  #comments #ds-thread #ds-reset .ds-replybox-main .ds-textarea-wrapper textarea {
     width: 95% !important;
     height: 90% !important;
     padding: 8px 6px 0 6px !important;
   }
-  .ds-replybox-main .ds-post-toolbar .ds-post-options span.ds-sync {
+  #comments #ds-thread #ds-reset .ds-replybox-main .ds-post-toolbar .ds-post-options span.ds-sync {
     display: none !important;
   }
 }
@@ -632,11 +689,16 @@ body {
   margin: 10px 0 0;
   border-top: 1px solid #4EC3FD;
 }
-.container .footer .copyright {
-  text-align: center;
+.container .footer p {
   font-size: 12px;
   line-height: 1.2em;
   margin: 10px 0;
+}
+.container .footer .copyright {
+  text-align: center;
+}
+.container .footer .powered-by {
+  text-align: right;
 }
 #hung-out {
   position: absolute;
@@ -661,7 +723,6 @@ body {
   padding: 8px;
   background-color: #FFF;
   border: 1px solid #B93B4F;
-  box-shadow: 0 0 8px 2px #F0818E;
 }
 html.oldie .global-nav .toggle-button {
   display: none;

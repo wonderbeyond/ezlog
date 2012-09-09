@@ -42,7 +42,7 @@
 <!--[if IE 6]>
 <link href="{{STATIC_URL}}Bootstrap-IE6/ie6.min.css" rel="stylesheet />
 <script src="{{STATIC_URL}}Bootstrap-IE6/ie6.min.js"></script>
- <style>.main, {float: left;} .sidebar {float: right;}</style>
+ <style>#main, {float: left;} #sidebar {float: right;}</style>
 <![endif]-->
 
 {% if ezsettings.google_analytics.track_id %}
@@ -97,12 +97,12 @@
 
     <div class="row-fluid content-wrapper">
       <!--正文区块-->
-      <div class="span8 main">
+      <div class="span8" id="main">
       {% block main %}this base template{% endblock %}
       </div>
 
       <!--侧边栏-->
-      <div class="span4 sidebar">
+      <div class="span4" id="sidebar">
         {% block sidebar %}
           {% include "panels/broadcast.html" %}
           {% include "panels/friend-links.html" %}
@@ -110,7 +110,7 @@
           {% include "panels/ds-recent-comments.html" %}
           {% include "panels/ds-recent-visitors.html" %}
         {% endblock sidebar %}
-      </div> <!-- .sidebar -->
+      </div> <!-- #sidebar -->
     </div>
 
     <!--页脚-->

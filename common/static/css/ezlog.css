@@ -480,56 +480,56 @@ body {
   margin: 16px auto;
   border-radius: 5px;
 }
-.container .content-wrapper .main .empty-error {
+.container .content-wrapper #main .empty-error {
   color: #B94A48;
   font-weight: normal;
   font-size: 24px;
 }
-.container .content-wrapper .main .article h1.article-title {
+.container .content-wrapper #main .article h1.article-title {
   padding: 0;
   font-size: 24px;
   font-weight: normal;
   border-bottom: 1px solid #cce7fa;
 }
-.container .content-wrapper .main .article .article-info {
+.container .content-wrapper #main .article .article-info {
   font-size: 12px;
   line-height: 18px;
   margin: 0;
   padding: 0;
   color: #555555;
 }
-.container .content-wrapper .main .article .article-info .item {
+.container .content-wrapper #main .article .article-info .item {
   padding: 0 6px 0 0;
 }
-.container .content-wrapper .main .article .article-info .item .tag-item {
+.container .content-wrapper #main .article .article-info .item .tag-item {
   padding: 0 3px 0 0;
 }
-.container .content-wrapper .main .article .article-info i {
+.container .content-wrapper #main .article .article-info i {
   margin-top: 0;
 }
-.container .content-wrapper .main .article .content {
+.container .content-wrapper #main .article .content {
   padding: 0;
   margin: 16px 0;
 }
-.container .content-wrapper .main .article .content img {
+.container .content-wrapper #main .article .content img {
   display: inline-block;
   max-width: 98%;
   border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.36);
   cursor: url(/static/img/cur/zoomin.cur), pointer;
 }
-.container .content-wrapper .main .article.summary {
+.container .content-wrapper #main .article.summary {
   clear: both;
 }
-.container .content-wrapper .main .article.summary .content {
+.container .content-wrapper #main .article.summary .content {
   font-size: 13px;
   line-height: 20px;
   margin: 6px 0 20px 0;
 }
-.container .content-wrapper .main .article.summary .content .summary-text {
+.container .content-wrapper #main .article.summary .content .summary-text {
   word-break: break-all;
 }
-.container .content-wrapper .main .article.summary img.cover {
+.container .content-wrapper #main .article.summary img.cover {
   float: left;
   height: 100px;
   max-width: 50%;
@@ -541,91 +541,91 @@ body {
   background: #FFF;
   cursor: url(/static/img/cur/zoomin.cur), pointer;
 }
-.container .content-wrapper .main .article.summary img.cover:hover {
+.container .content-wrapper #main .article.summary img.cover:hover {
   border: 1px solid #999;
 }
-.container .content-wrapper .main .article.summary img.cover.loading {
+.container .content-wrapper #main .article.summary img.cover.loading {
   border-color: #FC2626;
   box-shadow: 0 0 3px rgba(238, 8, 8, 0.62);
 }
-.container .content-wrapper .main .article.summary a.more {
+.container .content-wrapper #main .article.summary a.more {
   float: right;
   padding: 0 6px;
   text-shadow: 0 1px 1px white;
 }
-.container .content-wrapper .main .plog {
+.container .content-wrapper #main .plog {
   max-width: 320px;
   _width: 320px;
   margin: 0 auto 36px;
 }
-.container .content-wrapper .main .plog h1 {
+.container .content-wrapper #main .plog h1 {
   margin: 9px 0 3px;
   font-size: 22px;
   line-height: 1.2em;
   font-weight: normal;
   color: #08C;
 }
-.container .content-wrapper .main .plog .meta-data {
+.container .content-wrapper #main .plog .meta-data {
   color: #666;
   margin: 5px 0;
 }
-.container .content-wrapper .main .plog .meta-data .item {
+.container .content-wrapper #main .plog .meta-data .item {
   margin: 0 10px 0 0;
 }
-.container .content-wrapper .main .plog img {
+.container .content-wrapper #main .plog img {
   display: inline-block;
   box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   cursor: url(/static/img/cur/zoomin.cur), pointer;
 }
-.container .content-wrapper .main .plog .photo-desc {
+.container .content-wrapper #main .plog .photo-desc {
   margin: 6px 0;
   font-size: 14px;
 }
-.container .content-wrapper .sidebar .panel {
+.container .content-wrapper #sidebar .panel {
   margin: 6px 0 20px;
   border-radius: 5px;
 }
-.container .content-wrapper .sidebar .panel .panelbar {
+.container .content-wrapper #sidebar .panel .panelbar {
   padding: 2px 0 0 6px;
   font-size: 14px;
   line-height: 20px;
   _font-weight: bold;
   border-bottom: 3px solid #84C7F6;
 }
-.container .content-wrapper .sidebar .panel .panelbody {
+.container .content-wrapper #sidebar .panel .panelbody {
   background: transparent;
   padding: 6px;
 }
-.container .content-wrapper .sidebar .panel .panelbody ul {
+.container .content-wrapper #sidebar .panel .panelbody ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.container .content-wrapper .sidebar .panel .panelbody ul li {
+.container .content-wrapper #sidebar .panel .panelbody ul li {
   line-height: 2em;
 }
-.container .content-wrapper .sidebar .panel .panelbody ul li a {
+.container .content-wrapper #sidebar .panel .panelbody ul li a {
   text-decoration: none;
 }
-.container .content-wrapper .sidebar .panel.categroy .panelbody li,
-.container .content-wrapper .sidebar .panel.friend-links .panelbody li {
+.container .content-wrapper #sidebar .panel.categroy .panelbody li,
+.container .content-wrapper #sidebar .panel.friend-links .panelbody li {
   min-width: 49%;
   _width: 49%;
   float: left;
 }
-.container .content-wrapper .sidebar .panel.tag-cloud .panelbody {
+.container .content-wrapper #sidebar .panel.tag-cloud .panelbody {
   margin-right: -0.5em;
 }
-.container .content-wrapper .sidebar .panel.tag-cloud .panelbody a {
+.container .content-wrapper #sidebar .panel.tag-cloud .panelbody a {
   display: inline-block;
   line-height: 1.5em;
   padding: 0 1em 0 0;
 }
-.container .content-wrapper .sidebar .panel.sina-weibo .panelbody {
+.container .content-wrapper #sidebar .panel.sina-weibo .panelbody {
   padding: 0;
 }
-.container .content-wrapper .sidebar .panel.broadcast .panelbody p {
+.container .content-wrapper #sidebar .panel.broadcast .panelbody p {
   margin: 0 0 6px;
 }
 .container .footer {

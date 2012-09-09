@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN" class="standard"><!--<![endif]-->
 <head>
 <meta charset="UTF-8" />
-<title>{% block title %}ezlog{% endblock %}</title>
+<title>{% block title %}{{ezsettings.common.site_title|default:"EZLog"}}{% endblock %}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="{{site_config.description}}" />
 
@@ -115,10 +115,8 @@
 
     <!--页脚-->
     <div class="row-fluid footer">
-      <div class="span12">
-        <p class="copyright">Copyright © 2012 Wonder.
-          保留所有权利, 除非另有说明.</p>
-        </div>
+        <p class="span6 copyright">Copyright © 2012 Wonder. 保留所有权利, 除非另有说明.</p>
+        <p class="span6 powered-by">{{ezsettings.common.copyright|default:"Powered by EZLog."}}</p>
     </div>
   </div>
   <!-- 备注: 文档加载后完成再加载多说脚本, 避免延缓页面的加载! -->

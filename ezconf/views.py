@@ -52,7 +52,7 @@ def get_nav_page(request, pid):
 @staff_member_required
 def export_settings(request):
     return HttpResponse(ezsettings.as_readable_json(),
-                        content_type='application/json')
+                        content_type='application/json; charset=utf-8')
     
 @staff_member_required
 def import_settings(request):

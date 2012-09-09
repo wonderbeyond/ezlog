@@ -1,1 +1,25 @@
-{% extends "pages/page.html" %}
+{% extends "ezlog.html" %}
+
+{% block ext_stylesheets %}
+<style type="text/css">
+    h1.page-title {
+        font-size: 24px;
+        font-weight: normal;
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+<h1 class="page-title">{{page.title}}</h1>
+<div class="content">
+    {{ page.content|safe }}
+</div>
+
+<div id="comments">
+    <div class="ds-thread" data-thread-key="navpage.{{page.pk}}" data-title="{{page.title}}"
+        data-category="SiteNavPage" data-author-key="" data-url="" data-form-positon="top">
+    </div>
+</div>
+
+
+{% endblock %}

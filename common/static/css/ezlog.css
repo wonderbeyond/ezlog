@@ -400,6 +400,11 @@ body {
   height: 40px;
   padding: 0 12px;
 }
+.container .header .global-nav.horizontal li .enhanced {
+  font-weight: bold;
+  color: #FFF;
+  text-shadow: 0px 1px 1px #000;
+}
 .container .header .global-nav.horizontal li a,
 .container .header .global-nav.horizontal li a:visited {
   display: inline-block;
@@ -410,8 +415,13 @@ body {
 }
 .container .header .global-nav.horizontal li a:hover,
 .container .header .global-nav.horizontal li a:visited:hover {
-  color: #FFF;
   font-weight: bold;
+  color: #FFF;
+  text-shadow: 0px 1px 1px #000;
+}
+.container .header .global-nav.horizontal li.current a {
+  font-weight: bold;
+  color: #FFF;
   text-shadow: 0px 1px 1px #000;
 }
 .container .header .global-nav.vertical {

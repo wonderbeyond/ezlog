@@ -213,6 +213,13 @@ function plain2html(text) {
 })(jQuery);
 
 $(document).ready(function(){
+    // 标记导航区域的current项目
+    $('.global-nav .nav-links li a').each(function(){
+        if(location.href == this.href) {
+            $(this).parent('li').addClass('current');
+        }
+    });
+
     // 把公告板中的纯文本内容转换为HTML
     var $broadcast_content = $('.panel.broadcast .panelbody');
     $broadcast_content.html(plain2html($broadcast_content.text()));

@@ -310,7 +310,6 @@ body {
   margin: 0;
   font-size: 12px;
   line-height: 20px;
-  color: #666666;
   color: #B17373;
   text-shadow: 0 0px 1px #FFF;
   font-family: monospace;
@@ -554,9 +553,16 @@ body {
 }
 .container .content-wrapper #main .article h1.article-title {
   padding: 0;
+  border-bottom: 1px solid #cce7fa;
+}
+.container .content-wrapper #main .article h1,
+.container .content-wrapper #main .article h1 a {
   font-size: 24px;
   font-weight: normal;
-  border-bottom: 1px solid #cce7fa;
+}
+.container .content-wrapper #main .article.complete h1,
+.container .content-wrapper #main .article.complete h1 a {
+  color: #333333;
 }
 .container .content-wrapper #main .article .article-info {
   font-size: 12px;
@@ -598,8 +604,9 @@ body {
 }
 .container .content-wrapper #main .article.summary img.cover {
   float: left;
-  height: 100px;
-  max-width: 50%;
+  max-height: 100px;
+  _height: 100px;
+  max-width: 100%;
   padding: 3px;
   margin: 0 10px 0 0;
   border: 1px solid #CCC;

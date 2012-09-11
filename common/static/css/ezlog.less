@@ -50,7 +50,7 @@ body {
             margin: 0;
             font-size: 12px;
             line-height: 20px;
-            color: @baseColor + #333;
+            //color: @baseColor + #333;
             color: #B17373;
             text-shadow: 0 0px 1px #FFF;
             font-family: monospace;
@@ -250,10 +250,20 @@ body {
             .article {
                 h1.article-title {
                     padding: 0;
-                    font-size: 24px;
-                    font-weight: normal;
                     border-bottom: 1px solid #cce7fa;
                 }
+
+                h1, h1 a {
+                    font-size: 24px;
+                    font-weight: normal;
+                }
+
+                &.complete {
+                    h1, h1 a {
+                        color: @baseColor;
+                    }
+                }
+
                 .article-info {
                     font-size: 12px;
                     line-height: 18px;
@@ -313,8 +323,9 @@ body {
 
                 img.cover {
                     float: left;
-                    height: 100px;
-                    max-width: 50%;
+                    max-height: 100px;
+                    _height: 100px;
+                    max-width: 100%;
                     padding: 3px;
                     margin: 0 10px 0 0;
                     border: 1px solid #CCC;

@@ -58,11 +58,17 @@ syncdb时可能出现 `Incorrect string value` 的错误.
 
 ## 静态文件处理
 
-### 清楚用不上的静态文件
+### 清除用不上的静态文件
 
 grappelli包含有用不上的 tiny_mce, 删除可以节省大量空间
 
 ## 部署到SAE
+
+### 过程概要:
+
+- 上传代码(打包依赖的python包到virtualenv.bundle.zip)
+- 导入MySQL数据
+- 在SAE Storage管理页面创建名为base的domain.
 
 ### 从MySQL导出数据
 

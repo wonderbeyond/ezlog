@@ -21,3 +21,5 @@ ezsettings.common.site_desc, ezsettings.common.copyright
 插入到文章中的外部链接在新标签中打开, 考虑js添加target?
 
 BUG: blog.query视图中的日期过滤不是按照当地时间的.
+
+清除ckeditor plugins目录下不需要的插件

@@ -19,7 +19,14 @@
                 "type": "longtext", 
                 "name": "broadcast", 
                 "value": "请在后台管理界面修改公告信息.", 
-                "desc": "用于显示在公告板中"
+                "desc": "用于显示在公告板中, 设置为空将不显示公告板."
+            }, 
+            {
+                "verbose_name": "站点描述", 
+                "type": "longtext", 
+                "name": "site_desc", 
+                "value": "", 
+                "desc": "对该站点的描述信息, 利于搜索引擎索引."
             }, 
             {
                 "verbose_name": "主题名称", 
@@ -27,6 +34,12 @@
                 "name": "theme_name", 
                 "value": "保留以后使用", 
                 "desc": "请输入要使用的主题名称"
+            },
+            {
+                "verbose_name": "版权信息", 
+                "type": "text", 
+                "name": "copyright", 
+                "value": "Copyright © 2012 xxx."
             }
         ], 
         "verbose_name": "一般配置", 

@@ -22,5 +22,3 @@ migrations/
 /libs/
 
 ezlog/settings/local.py
-
-/locale/

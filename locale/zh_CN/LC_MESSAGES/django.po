@@ -1,0 +1,1285 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-13 20:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: ENV/lib/python2.7/site-packages/filebrowser/actions.py:51
+#, python-format
+msgid "Action applied successfully to '%s'"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/actions.py:56
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:21
+msgid "Flip horizontal"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/actions.py:62
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:22
+msgid "Flip vertical"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/actions.py:68
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:23
+msgid "Rotate 90° CW"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/actions.py:74
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:24
+msgid "Rotate 90° CCW"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/actions.py:80
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:25
+msgid "Rotate 180°"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/decorators.py:23
+msgid ""
+"Error finding Upload-Folder (MEDIA_ROOT + DIRECTORY). Maybe it does not "
+"exist?"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/decorators.py:25
+msgid "The requested Folder does not exist."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/decorators.py:41
+msgid "The requested File does not exist."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/decorators.py:47
+msgid "You do not have permission to access this file!"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/fields.py:65
+#, python-format
+msgid "Extension %(ext)s is not allowed. Only %(allowed)s is allowed."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:39
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:58
+#: ENV/lib/python2.7/site-packages/taggit/models.py:10
+msgid "Name"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:39
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:45
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:58
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:79
+msgid "Only letters, numbers, underscores, spaces and hyphens are allowed."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:48
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:82
+msgid "The Folder already exists."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:57
+msgid "Actions"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/forms.py:84
+msgid "The File already exists."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/settings.py:121
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:21
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:22
+msgid "Folder"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/settings.py:122
+msgid "Image"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/settings.py:123
+msgid "Video"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/settings.py:124
+msgid "Document"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/settings.py:125
+msgid "Audio"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:264
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/breadcrumbs.html:8
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/breadcrumbs.html:10
+#: ezlog/dashboard.py:85
+msgid "FileBrowser"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:293
+#, python-format
+msgid "The Folder %s was successfully created."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:298
+msgid "Permission denied."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:300
+msgid "Error creating folder."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:307
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:310
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/index.html:79
+msgid "New Folder"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:324
+msgid "Select files to upload"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:327
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/index.html:80
+msgid "Upload"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:358
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:361
+msgid "Confirm delete"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:383
+#, python-format
+msgid "Successfully deleted %s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:428
+msgid "Renaming was successful."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/sites.py:437
+msgid "Error."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/widgets.py:19
+#: ENV/lib/python2.7/site-packages/filebrowser/widgets.py:52
+msgid "Currently"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/widgets.py:20
+#: ENV/lib/python2.7/site-packages/filebrowser/widgets.py:53
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filelisting.html:130
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/app_list.html:24
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/model_list.html:10
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/app_index.html:32
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/index.html:40
+msgid "Change"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/widgets.py:21
+#: ENV/lib/python2.7/site-packages/filebrowser/widgets.py:54
+msgid "Clear"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/createdir.html:23
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:47
+msgid "Please correct the following errors."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/createdir.html:36
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:140
+msgid ""
+"The Name will be normalized by converting or stripping all non-standard "
+"characters."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/createdir.html:39
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:143
+msgid ""
+"The Name will be converted to lowercase. Spaces will be replaced with "
+"underscores."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/createdir.html:50
+msgid "Submit"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/custom_field.html:26
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/widgets/clearablefileinput.html:11
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/widgets/fileinput.html:11
+msgid "File not found"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/delete_confirm.html:29
+#, python-format
+msgid ""
+"Are you sure you want to delete \"%(escaped_object)s\"? All of the following "
+"items will be deleted:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/delete_confirm.html:42
+#, python-format
+msgid "... and %(escaped_object)s more Files."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/delete_confirm.html:49
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:44
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_confirmation.html:52
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:58
+msgid "Cancel"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/delete_confirm.html:50
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_confirmation.html:53
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:59
+msgid "Yes, I'm sure"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:62
+msgid "Edit"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:77
+msgid "Folder Information"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:80
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:115
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:28
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:29
+msgid "Date"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:92
+msgid "File Information"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:95
+msgid "URL"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:105
+msgid "Filesize"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:126
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:25
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:26
+msgid "Size"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:139
+msgid "Image Versions"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:143
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:15
+msgid "Thumbnail"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:145
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filelisting.html:100
+msgid "View Image"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:169
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_confirmation.html:18
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/submit_line.html:6
+msgid "Delete"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:170
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/submit_line.html:9
+#: ezconf/templates/ezconf/change_form.html:28
+msgid "Save"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/detail.html:171
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/submit_line.html:18
+#: ezconf/templates/ezconf/change_form.html:29
+msgid "Save and continue editing"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:45
+msgid "Failed"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:59
+msgid "{file} has invalid extension. Only {extensions} are allowed."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:60
+msgid "{file} is too large, maximum file size is {sizeLimit}."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:61
+msgid "{file} is too small, minimum file size is {minSizeLimit}."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:62
+msgid "{file} is empty, please select files again without it."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:63
+msgid ""
+"The files are being uploaded, if you leave now the upload will be cancelled."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:108
+msgid "Please enable Javascript to upload files."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:113
+msgid "Help"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:116
+msgid "Allowed"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:130
+msgid "Max. Filesize"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/upload.html:137
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:17
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:18
+msgid "Filename"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/breadcrumbs.html:5
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/templates/admin/index.html:25
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/500.html:9
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/app_index.html:12
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/base.html:72
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_form.html:108
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_list.html:124
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:9
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_confirmation.html:14
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:14
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/index.html:18
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/invalid_setup.html:10
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/object_history.html:10
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:21
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:8
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/index.html:9
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/missing_docutils.html:8
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/model_detail.html:20
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/model_index.html:23
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/template_filter_index.html:25
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/template_tag_index.html:27
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/view_detail.html:7
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/view_index.html:23
+#: ENV/lib/python2.7/site-packages/grappelli/templates/grp_doc/basic_page_structure.html:131
+#: ENV/lib/python2.7/site-packages/grappelli/templates/grp_doc/context_navigation.html:55
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_done.html:21
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:19
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_complete.html:6
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_confirm.html:6
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_done.html:6
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_form.html:6
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/recover_form.html:7
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/recover_list.html:6
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/revision_form.html:7
+#: ezconf/templates/ezconf/import_settings.html:11
+#: ezconf/templates/ezconf/index.html:11
+#: ezconf/templates/ezconf/update_setting_itmes.html:6
+msgid "Home"
+msgstr "首页"
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filelisting.html:18
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filelisting.html:44
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filelisting.html:69
+msgid "Select"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filelisting.html:22
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filelisting.html:48
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filelisting.html:73
+msgid "Versions"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filter.html:4
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_list.html:170
+msgid "Filter"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filter.html:7
+msgid "By Date"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filter.html:9
+msgid "Any Date"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filter.html:10
+msgid "Today"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filter.html:11
+msgid "Past 7 days"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filter.html:12
+msgid "This Month"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filter.html:13
+msgid "This year"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filter.html:17
+msgid "By Type"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/filter.html:19
+msgid "All"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/paginator.html:6
+msgid "result"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/paginator.html:6
+msgid "results"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/paginator.html:10
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/paginator.html:12
+msgid "total"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:12
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/tableheader.html:13
+msgid "Type"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/toolbar.html:6
+msgid "Results"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/toolbar.html:8
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/pagination.html:8
+#: ENV/lib/python2.7/site-packages/grappelli/views/related.py:103
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/toolbar.html:9
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/pagination.html:13
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/pagination.html:15
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/filebrowser/templates/filebrowser/include/toolbar.html:16
+msgid "Search"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:98
+msgid "Dashboard"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:142
+#, fuzzy
+msgid "Quick links"
+msgstr "快速通道"
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:145
+msgid "Return to site"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:146
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:12
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:24
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:67
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/includes_grappelli/header.html:18
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_done.html:12
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:11
+msgid "Change password"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:148
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:15
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/includes_grappelli/header.html:26
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_done.html:15
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:14
+msgid "Log out"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:154
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/modules.py:219
+msgid "Applications"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:160
+#, fuzzy
+msgid "Administration"
+msgstr "Django管理"
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:165
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/modules.py:295
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/index.html:52
+#: ezlog/dashboard.py:132
+msgid "Recent Actions"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:169
+msgid "Latest Django News"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:176
+#, fuzzy
+msgid "Support"
+msgstr "导入"
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:179
+#, fuzzy
+msgid "Django documentation"
+msgstr "Django管理"
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:184
+msgid "Django \"django-users\" mailing list"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/dashboards.py:189
+msgid "Django irc channel"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/modules.py:193
+#, fuzzy
+msgid "Links"
+msgstr "快速通道"
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/modules.py:348
+msgid "No recent actions."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/modules.py:357
+msgid "RSS Feed"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/app_list.html:19
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/model_list.html:9
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/app_index.html:31
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_form.html:111
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/index.html:39
+msgid "Add"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/recent_actions.html:18
+msgid "None Available"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/404.html:7
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/404.html:11
+msgid "Page not found"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/404.html:12
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/500.html:10
+#: ENV/lib/python2.7/site-packages/grappelli/views/related.py:110
+msgid "Server error"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/500.html:15
+msgid "Server error (500)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/500.html:19
+msgid "Server Error <em>(500)</em>"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/500.html:20
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/actions.html:10
+msgid "Click here to select the objects across all pages"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/actions.html:10
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/actions.html:11
+msgid "Clear selection"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/app_index.html:14
+#, python-format
+msgid "<li>%(name)s</li>"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/app_index.html:39
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/index.html:47
+msgid "You don´t have permission to edit anything."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/base_site.html:4
+#, fuzzy
+msgid "Django site admin"
+msgstr "Django管理"
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/base_site.html:7
+#, fuzzy
+msgid "Django administration"
+msgstr "Django管理"
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_form.html:122
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/object_history.html:14
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/revision_form.html:11
+msgid "History"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_form.html:123
+msgid "View on site"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_form.html:141
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_list.html:204
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/login.html:31
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:40
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_list.html:141
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_list_results.html:18
+msgid "Remove from sorting"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_list_results.html:19
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/change_list_results.html:20
+msgid "Toggle sorting"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:12
+#, fuzzy
+msgid "Export selection as CSV"
+msgstr "导出设置"
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:31
+msgid "Export following fields:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:34
+msgid "Select all"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:54
+msgid "Back"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:55
+#, fuzzy
+msgid "Export"
+msgstr "导入"
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_confirmation.html:28
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_confirmation.html:36
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_confirmation.html:46
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:17
+msgid "Delete multiple objects"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:27
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:35
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:45
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/filter.html:3
+#, python-format
+msgid "%(filter_title)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/index.html:54
+msgid "My Actions"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/index.html:57
+msgid "None available"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/invalid_setup.html:17
+msgid ""
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/login.html:44
+msgid "Username:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/login.html:53
+msgid "Password:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/login.html:65
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_complete.html:16
+#, fuzzy
+msgid "Log in"
+msgstr "EZLog设置"
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/object_history.html:25
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/object_history.html:13
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/recover_list.html:22
+msgid "Date/time"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/object_history.html:26
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/object_history.html:14
+msgid "User"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/object_history.html:27
+msgid "Action"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/object_history.html:33
+msgid "DATETIME_FORMAT"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/object_history.html:37
+msgid "Created object"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/object_history.html:47
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/object_history.html:34
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/pagination.html:27
+msgid "Show all"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/submit_line.html:12
+msgid "Save as new"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/submit_line.html:15
+msgid "Save and add another"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:8
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/includes_grappelli/header.html:39
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:9
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_done.html:8
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:7
+msgid "Documentation"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:28
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_done.html:22
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:20
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:23
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:28
+msgid "Password change"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:37
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:47
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:44
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_confirm.html:19
+msgid "New password:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:56
+msgid "Password (again)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/auth/user/change_password.html:60
+msgid "Enter the same password as above, for verification."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/stacked.html:9
+msgid "Open All Items"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/stacked.html:10
+msgid "Close All Items"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/stacked.html:11
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/stacked.html:53
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/tabular.html:91
+msgid "Add Item"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/stacked.html:24
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/tabular.html:64
+msgid "View on Site"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/stacked.html:26
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/tabular.html:66
+msgid "Move Item"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/stacked.html:30
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/stacked.html:32
+msgid "Delete Item"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/stacked.html:51
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/tabular.html:89
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/tabular.html:9
+msgid "Add Another"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/tabular.html:69
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/edit_inline/tabular.html:74
+msgid "Remove"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin/includes_grappelli/header.html:34
+msgid "Tests"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:10
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:16
+msgid "Bookmarklets"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:13
+msgid "Documentation bookmarklets"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:18
+msgid ""
+"\n"
+"            <p>To install bookmarklets, drag the link to your bookmarks\n"
+"    toolbar, or right-click the link and add it to your bookmarks. Now you "
+"can\n"
+"    select the bookmarklet from any page in the site.  Note that some of "
+"these\n"
+"    bookmarklets require you to be viewing the site from a computer "
+"designated\n"
+"    as \"internal\" (talk to your system administrator if you aren't sure "
+"if\n"
+"    your computer is \"internal\").</p>\n"
+"        "
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:27
+msgid "Documentation for this page"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:28
+msgid ""
+"Jumps you from any page to the documentation for the view that generates "
+"that page."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:31
+msgid "Show object ID"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:32
+msgid ""
+"Shows the content-type and unique ID for pages that represent a single "
+"object."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:35
+msgid "Edit this object (current window)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:36
+msgid "Jumps to the admin page for pages that represent a single object."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:39
+msgid "Edit this object (new window)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/admin_doc/bookmarklets.html:40
+msgid "As above, but opens the admin page in a new window."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/logged_out.html:12
+msgid "Log in again"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_done.html:26
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_done.html:28
+msgid "Password change successful"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_done.html:29
+msgid "Your password was changed."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:32
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:37
+msgid "Old password:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:51
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_confirm.html:21
+msgid "Confirm password:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_change_form.html:60
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_confirm.html:22
+msgid "Change my password"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_complete.html:7
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_confirm.html:11
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_done.html:7
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_form.html:7
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_form.html:11
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_form.html:14
+msgid "Password reset"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_complete.html:11
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_complete.html:14
+msgid "Password reset complete"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_complete.html:15
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_confirm.html:15
+msgid "Enter new password"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_confirm.html:16
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_confirm.html:25
+msgid "Password reset unsuccessful"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_confirm.html:26
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_done.html:11
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_done.html:14
+msgid "Password reset successful"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_done.html:15
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_email.html:3
+#, python-format
+msgid ""
+"You're receiving this e-mail because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_email.html:5
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_email.html:9
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_email.html:11
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_email.html:13
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_form.html:15
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_form.html:18
+msgid "E-mail address:"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/registration/password_reset_form.html:18
+msgid "Reset my password"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/change_list.html:6
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/recover_form.html:10
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/recover_list.html:9
+#, python-format
+msgid "Recover deleted %(name)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/object_history.html:7
+msgid ""
+"Choose a date from the list below to revert to a previous version of this "
+"object."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/object_history.html:15
+msgid "Comment"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/recover_form.html:18
+msgid "Press the save button below to recover this version of the object."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/recover_list.html:16
+msgid ""
+"Choose a date from the list below to recover a deleted version of an object."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/recover_list.html:36
+msgid "There are no deleted objects to recover."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/revision_form.html:12
+#, python-format
+msgid "Revert %(verbose_name)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/templates/reversion/revision_form.html:27
+msgid "Press the save button below to revert to this version of the object."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/grappelli/views/related.py:70
+msgid "?"
+msgstr ""
+
+# # For django-taggit
+#: ENV/lib/python2.7/site-packages/taggit/forms.py:21
+#, fuzzy
+msgid "Please provide a comma-separated list of tags."
+msgstr "英文逗号分割的标签列表。"
+
+#: ENV/lib/python2.7/site-packages/taggit/managers.py:39
+#: ENV/lib/python2.7/site-packages/taggit/models.py:57
+msgid "Tags"
+msgstr "标签"
+
+# # For django-taggit
+#: ENV/lib/python2.7/site-packages/taggit/managers.py:40
+msgid "A comma-separated list of tags."
+msgstr "英文逗号分割的标签列表。"
+
+#: ENV/lib/python2.7/site-packages/taggit/models.py:11
+msgid "Slug"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/taggit/models.py:56
+msgid "Tag"
+msgstr "标签"
+
+#: ENV/lib/python2.7/site-packages/taggit/models.py:63
+#, python-format
+msgid "%(object)s tagged with %(tag)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/taggit/models.py:113
+msgid "Object id"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/taggit/models.py:117
+#: ENV/lib/python2.7/site-packages/taggit/models.py:123
+#, fuzzy
+msgid "Content type"
+msgstr "内容管理"
+
+#: ENV/lib/python2.7/site-packages/taggit/models.py:159
+msgid "Tagged Item"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/taggit/models.py:160
+msgid "Tagged Items"
+msgstr ""
+
+#: ezconf/forms.py:34
+msgid "Not allowed filetype!"
+msgstr "不允许的文件类型"
+
+#: ezconf/views.py:22 ezconf/templates/ezconf/index.html:12
+#: ezlog/dashboard.py:52
+msgid "EZLog Settings"
+msgstr "EZLog设置"
+
+#: ezconf/views.py:60 ezconf/templates/ezconf/import_settings.html:12
+#: ezlog/dashboard.py:66
+msgid "Import Settings"
+msgstr "导入设置"
+
+#: ezconf/views.py:73 ezconf/templates/ezconf/update_setting_itmes.html:7
+#: ezlog/dashboard.py:71
+msgid "Update setting items"
+msgstr "更新设置项"
+
+#: ezconf/templates/ezconf/import_settings.html:21
+msgid "Import"
+msgstr "导入"
+
+#: ezconf/templates/ezconf/update_setting_itmes.html:15
+msgid "Update"
+msgstr "更新"
+
+#: ezlog/dashboard.py:27
+msgid "Content Management"
+msgstr "内容管理"
+
+#: ezlog/dashboard.py:35
+msgid "Nav and Links"
+msgstr "导航&链接"
+
+#: ezlog/dashboard.py:44
+msgid "Django Administration"
+msgstr "Django管理"
+
+#: ezlog/dashboard.py:56
+msgid "Site Parameters"
+msgstr "站点参数"
+
+#: ezlog/dashboard.py:61
+msgid "Export Settings"
+msgstr "导出设置"
+
+#: ezlog/dashboard.py:80
+msgid "Media Management"
+msgstr "媒体管理"
+
+#: ezlog/dashboard.py:94
+msgid "Quick Links"
+msgstr "快速通道"
+
+#: ezlog/dashboard.py:99
+msgid "Site Home"
+msgstr "站点首页"
+
+#: ezlog/dashboard.py:104
+msgid "Plog"
+msgstr "图志"
+
+#: ezlog/dashboard.py:113
+msgid "Feedback and Support"
+msgstr "反馈和支持"
+
+#: ezlog/dashboard.py:118
+msgid "EZLog official blog"
+msgstr "EZLog官方博客"
+
+#: ezlog/dashboard.py:123
+msgid "EZLog Author's Micro-blog"
+msgstr "EZLog作者微博"
+
+#: ezlog/settings/base.py:289
+msgid "EZLog Management"
+msgstr "EZLog管理"
+
+#, fuzzy
+#~ msgid "Site administration"
+#~ msgstr "Django管理"
+
+#, fuzzy
+#~ msgid "%s administration"
+#~ msgstr "Django管理"
+
+#, fuzzy
+#~ msgid "Important dates"
+#~ msgstr "导入设置"
+
+# # For django-taggit
+#, fuzzy
+#~ msgid "Comma-separated integers"
+#~ msgstr "英文逗号分割的标签列表。"
+
+#, fuzzy
+#~ msgid "aug"
+#~ msgstr "标签"

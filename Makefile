@@ -16,3 +16,6 @@ syncdb:
 dumpezsettings:
 	python ./manage.py dumpdata ezconf.ezsettingsdata > ./ezconf/fixtures/initial_data.json
 	python ./manage.py dumpcurrentsettings > ./ezconf/ezsettings.json
+
+makemessages:
+	$(MANAGE) makemessages -i '*django/*' -l zh_CN

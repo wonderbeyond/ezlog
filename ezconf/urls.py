@@ -6,4 +6,5 @@ urlpatterns = patterns('ezconf.views',
     url(r'^save_settings/$', 'save_settings',  name='ezconf.save_settings'),
     url(r'^export/ezsettings.json$', 'export_settings',  name='ezconf.export_settings'),
     url(r'^import/$', 'import_settings',  name='ezconf.import_settings'),
+    url(r'^update_setting_items/$', 'update_setting_items',  name='ezconf.update_setting_items'),
 )

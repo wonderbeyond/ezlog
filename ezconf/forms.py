@@ -35,3 +35,6 @@ class ExtFileField(forms.FileField):
 
 class ImportSettingsForm(forms.Form):
     file  = ExtFileField(ext_whitelist=['.json'])
+
+class UpdateSettingItemsForm(forms.Form):
+    file  = ExtFileField(ext_whitelist=['.json'])

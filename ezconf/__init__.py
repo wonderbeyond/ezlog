@@ -67,6 +67,16 @@ class EZSettings(object):
         self._settings = json.loads(data)
         self.save()
 
+    def update_setting_items_with_json_data(self, data):
+        '''更新设置项目, 对于已有项目继续使用原值'''
+        new_settings = json.loads(data)
+        for g in new_settings:
+            for f in g['fields']:
+                key = '%s.%s' % (g['name'], f['name'])
+                f['value'] = self.get(key, f['value'])
+        self._settings = new_settings
+        self.save()
+
 try:
     from django.db.utils import DatabaseError
     ezsettings = EZSettings()

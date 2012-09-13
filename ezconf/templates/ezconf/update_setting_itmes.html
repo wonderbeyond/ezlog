@@ -1,0 +1,17 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+  <ul class="grp-horizontal-list">
+    <li><a href="{% url admin:index %}">{% trans "Home" %}</a></li>
+    <li>{% trans "Update setting items" %}</li>
+  </ul>
+{% endblock %}
+
+{% block content %}
+<form action="{% url ezconf.update_setting_items %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{ form }}
+    <style type="text/css">label[for=id_file]{display: none;}</style>
+    <input type="submit" value="{% trans 'Update' %}">
+</form>
+{% endblock content %}

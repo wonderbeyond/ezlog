@@ -1,4 +1,5 @@
 {% extends "blog/blog.html" %}
+{% block title %}{{entry.title}} | {{ezsettings.common.site_title}}{% endblock title %}
 {% block main %}
   <div class="article complete">
     <h1 class="article-title"><a href="{{entry.get_absolute_url}}">{{entry.title}}</a></h1>

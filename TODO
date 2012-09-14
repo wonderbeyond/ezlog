@@ -6,19 +6,16 @@
 
 导航页面可排序
 
-各APP中的HTML title
-
-!Blog列表摘要中自动提取的缩略图非常不适合极小尺寸图片(比如ckeditor表情)
-
 在主界面为管理员呈现管理链接.
 
 前端: 图片加载完成前显性提示
 
 plog 的 get.html 模板
 
-
 插入到文章中的外部链接在新标签中打开, 考虑js添加target?
 
 BUG: blog.query视图中的日期过滤不是按照当地时间的.
 
 清除ckeditor plugins目录下不需要的插件
+
+per function cache

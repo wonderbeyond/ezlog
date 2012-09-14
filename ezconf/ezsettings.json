@@ -22,13 +22,6 @@
                 "desc": "用于显示在公告板中, 设置为空将不显示公告板."
             }, 
             {
-                "verbose_name": "站点描述", 
-                "type": "longtext", 
-                "name": "site_desc", 
-                "value": "", 
-                "desc": "对该站点的描述信息, 利于搜索引擎索引."
-            }, 
-            {
                 "verbose_name": "主题名称", 
                 "type": "text", 
                 "name": "theme_name", 

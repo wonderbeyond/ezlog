@@ -16,7 +16,6 @@
 
 plog 的 get.html 模板
 
-ezsettings.common.site_desc, ezsettings.common.copyright
 
 插入到文章中的外部链接在新标签中打开, 考虑js添加target?
 

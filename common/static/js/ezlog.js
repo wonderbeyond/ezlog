@@ -239,5 +239,12 @@ $(document).ready(function(){
             });
         }
     });
+
+    // 所有站外链接添加 target="_blank"
+    $('a:not([target])').each(function(){
+        if(this.host != location.host) {
+            $(this).attr('target', '_blank');
+        }
+    });
 });
 

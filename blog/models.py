@@ -5,7 +5,7 @@ from django.contrib.auth.admin import User
 from django.core.cache import cache
 from django.utils.html import strip_tags
 
-import os, re, time
+import os, re, time, cgi
 from pyquery import PyQuery as pq
 from filebrowser.base import FileObject
 from django.db.models.signals import post_save, post_delete
@@ -115,7 +115,7 @@ class Entry(BaseModel):
                 else:
                     print u'引用的图片不存在: %s' % fileobject.path
 
-        summary_text = orig_html.text()[:int(nchars)]
+        summary_text = cgi.escape(orig_html.text()[:int(nchars)])
         return (cover.outerHtml() or "") + \
             (u'<span class="summary-text">%s...</span>' % summary_text) + \
             (u'<a class="more" href="/%d/">阅读全文→</a>' % self.id) + \

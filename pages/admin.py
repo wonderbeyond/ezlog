@@ -6,7 +6,7 @@ class PageAdmin(admin.ModelAdmin):
     class Media:
         js = ('ckeditor/ckeditor.js',
               'ckeditor/config.js',
-              'admin/pages/js/ckeditor-setup.js',
+              'js/ckeditor-setup.js',
              )
 
 admin.site.register(Page, PageAdmin)

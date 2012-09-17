@@ -40,7 +40,7 @@ class EntryAdmin(admin.ModelAdmin):
         js = ('admin/js/blog/article_edit.js',
               'ckeditor/ckeditor.js',
               'ckeditor/config.js',
-              'admin/js/blog/ckeditor-setup.js',
+              'js/ckeditor-setup.js',
               'filebrowser/js/FB_CKEditor.js',
              )
         css = {

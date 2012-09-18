@@ -25,16 +25,16 @@
 
 
                 { 'name': 'styles',
-                    'items' : [ 'Styles','Format','Font','FontSize' ]
+                    'items' : ['Format','Font','FontSize' ]
                 },
 
                 '/',
 
                 { 'name': 'paragraph',
                     'items' : [ 'NumberedList','BulletedList','-',
-                        'Outdent','Indent','-','Blockquote','CreateDiv',
+                        /*'Outdent','Indent','-',*/'Blockquote','CreateDiv',
                         '-','JustifyLeft','JustifyCenter',
-                        'JustifyRight','JustifyBlock', ]
+                        'JustifyRight' ]
                 },
 
                 { 'name': 'links',
@@ -42,9 +42,8 @@
                 },
 
                 { 'name': 'insert',
-                    'items' : [ 'Templates','-','Image','Table',
-                        'HorizontalRule','Smiley','SpecialChar',
-                        'PageBreak','Iframe' ]
+                    'items' : ['Image','Table',
+                        'Smiley','SpecialChar' ]
                 },
 
                 { 'name': 'tools',

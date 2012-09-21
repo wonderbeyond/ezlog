@@ -7,7 +7,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TO_ABS_PATH = lambda p: os.path.join(HERE, p)
 
 sys.path.insert(0, HERE)
-sys.path.insert(0, TO_ABS_PATH('libs/virtualenv.bundle.zip'))
+#sys.path.insert(0, TO_ABS_PATH('libs/virtualenv.bundle.zip'))
+sys.path.insert(0, TO_ABS_PATH('libs'))
 
 
 ###! Copied form DPress.sites.index.wsgi

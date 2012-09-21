@@ -2,6 +2,10 @@
 from django.utils.translation import ugettext_lazy as _
 import os
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 PROJECT_ROOT = os.path.abspath( os.path.dirname(os.path.dirname(__file__)) )
 PROJECT_ROOT = os.path.dirname(PROJECT_ROOT)
 TO_ABS_PATH = lambda p: os.path.join(PROJECT_ROOT, p)
@@ -40,7 +44,7 @@ DB_MYSQL = {
 }
 
 DATABASES = {
-    'default': DB_SQLITE3,
+    'default': DB_MYSQL,
 }
 
 CACHES = {

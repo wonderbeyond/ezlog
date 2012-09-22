@@ -560,10 +560,6 @@ body {
   font-size: 24px;
   font-weight: normal;
 }
-.container .content-wrapper #main .article.complete h1,
-.container .content-wrapper #main .article.complete h1 a {
-  color: #333333;
-}
 .container .content-wrapper #main .article .article-info {
   font-size: 12px;
   line-height: 18px;
@@ -580,16 +576,22 @@ body {
 .container .content-wrapper #main .article .article-info i {
   margin-top: 0;
 }
-.container .content-wrapper #main .article .content {
-  padding: 0;
-  margin: 16px 0;
-}
 .container .content-wrapper #main .article .content img {
   display: inline-block;
+  cursor: url(/static/img/cur/zoomin.cur), pointer;
+}
+.container .content-wrapper #main .article.complete h1,
+.container .content-wrapper #main .article.complete h1 a {
+  color: #333333;
+}
+.container .content-wrapper #main .article.complete .content {
+  margin: 6px 0 16px 0;
+  line-height: 1.6;
+}
+.container .content-wrapper #main .article.complete .content img {
   max-width: 98%;
   border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.36);
-  cursor: url(/static/img/cur/zoomin.cur), pointer;
 }
 .container .content-wrapper #main .article.summary {
   clear: both;
@@ -613,7 +615,6 @@ body {
   border-radius: 0;
   box-shadow: none;
   background: #FFF;
-  cursor: url(/static/img/cur/zoomin.cur), pointer;
 }
 .container .content-wrapper #main .article.summary img.cover:hover {
   border: 1px solid #999;

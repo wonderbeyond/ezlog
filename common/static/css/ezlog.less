@@ -258,12 +258,6 @@ body {
                     font-weight: normal;
                 }
 
-                &.complete {
-                    h1, h1 a {
-                        color: @baseColor;
-                    }
-                }
-
                 .article-info {
                     font-size: 12px;
                     line-height: 18px;
@@ -287,67 +281,68 @@ body {
                     }
                 }
                 .content {
-                    padding: 0;
-                    margin: 16px 0;
-
                     img {
                         display: inline-block;
-                        max-width: 98%;
-                        //padding: 1px;
-                        //background-color: #FFF;
-                        //border: 2px solid #7CB6CE;
-                        border-radius: 5px;
-                        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.36);
                         cursor: url(/static/img/cur/zoomin.cur), pointer;
                     }
                 }
-            }
 
-            .article.complete {
-                p {
-                    //text-indent: 2em;
-                }
-            }
-            .article.summary {
-                clear: both;
+                &.complete {
+                    h1, h1 a {
+                        color: @baseColor;
+                    }
 
-                .content {
-                    font-size: 13px;
-                    line-height: 20px;
-                    margin: 6px 0 20px 0;
-
-                    .summary-text {
-                        word-break: break-all;
+                    .content {
+                        margin: 6px 0 16px 0;
+                        line-height: 1.6;
+                        img {
+                            max-width: 98%;
+                            border-radius: 5px;
+                            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.36);
+                        }
                     }
                 }
 
-                img.cover {
-                    float: left;
-                    max-height: 100px;
-                    _height: 100px;
-                    max-width: 100%;
-                    padding: 3px;
-                    margin: 0 10px 0 0;
-                    border: 1px solid #CCC;
-                    border-radius: 0;
-                    box-shadow: none;
-                    background: #FFF;
-                    cursor: url(/static/img/cur/zoomin.cur), pointer;
-                    &:hover {
-                        border: 1px solid #999;
-                    }
-                    &.loading {
-                        border-color: #FC2626;
-                        box-shadow: 0 0 3px rgba(238, 8, 8, 0.62);
-                    }
-                }
+                &.summary {
+                    clear: both;
+                    .content {
+                        font-size: 13px;
+                        line-height: 20px;
+                        margin: 6px 0 20px 0;
 
-                a.more {
-                    float: right;
-                    padding: 0 6px;
-                    text-shadow: 0 1px 1px white;
+                        .summary-text {
+                            word-break: break-all;
+                        }
+                    }
+
+                    img.cover {
+                        float: left;
+                        max-height: 100px;
+                        _height: 100px;
+                        max-width: 100%;
+                        padding: 3px;
+                        margin: 0 10px 0 0;
+                        border: 1px solid #CCC;
+                        border-radius: 0;
+                        box-shadow: none;
+                        background: #FFF;
+                        &:hover {
+                            border: 1px solid #999;
+                        }
+                        &.loading {
+                            border-color: #FC2626;
+                            box-shadow: 0 0 3px rgba(238, 8, 8, 0.62);
+                        }
+                    }
+
+                    a.more {
+                        float: right;
+                        padding: 0 6px;
+                        text-shadow: 0 1px 1px white;
+                    }
                 }
             }
+
 
             .plog {
                 max-width: 320px; //列表中展示宽度为320的图片.

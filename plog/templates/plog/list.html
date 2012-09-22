@@ -1,8 +1,5 @@
 {% extends "ezlog.html" %}
 {% load fb_versions %}
-{% block ext_javascripts %}
-<script src="{{STATIC_URL}}js/plog/plog.js"></script>
-{% endblock  %}
 {% block title %}图志 | {{ezsettings.common.site_title}}{% endblock title %}
 {% block sidebar %}
   {% include "panels/broadcast.html" %}

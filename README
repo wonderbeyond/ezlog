@@ -18,6 +18,11 @@
     $ ./manage.py createcachetable ezlog_cache
 
 
+## 配置
+
+必须进行的配置:
+
+- sites.site
 
 ## 对BootStrap的定制:
 

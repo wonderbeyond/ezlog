@@ -19,3 +19,7 @@ dumpezsettings:
 
 makemessages:
 	$(MANAGE) makemessages -i '*django/*' -l zh_CN
+
+collectstatic:
+	$(MANAGE) compress
+	$(MANAGE) collectstatic

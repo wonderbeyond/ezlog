@@ -1,6 +1,8 @@
 # coding=utf-8
 import sae.const
 
+COMPRESS_ENABLED = True
+
 DEFAULT_FILE_STORAGE = 'saestorage.SaeStorage'
 FILEBROWSER_DIRECTORY = ''
 FILEBROWSER_VERSIONS_BASEDIR = ''

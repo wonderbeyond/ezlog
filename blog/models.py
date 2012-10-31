@@ -111,7 +111,7 @@ class Entry(BaseModel):
                     fileobject = fileobject.original
                     thumbnail = fileobject.version_generate('thumbnail')
                     cover.attr('src', thumbnail.url).attr('data-orig-src', orig_src)
-                    cover.css(height=100, width=100)
+                    cover.css(height='100px', width='100px')
                 else:
                     print u'引用的图片不存在: %s' % fileobject.path
 

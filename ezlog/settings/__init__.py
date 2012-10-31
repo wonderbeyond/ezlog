@@ -7,8 +7,7 @@ from base import *
 if 'DATABASE_URL' in os.environ:
     # Heroku
     from for_heroku import *
-
-if 'SERVER_SOFTWARE' in os.environ:
+elif 'SERVER_SOFTWARE' in os.environ:
     # SAE
     from for_sae import *
 

@@ -17,3 +17,7 @@
     <a class="ds-thread-count" data-thread-key="blog.{{entry.pk}}"
         href="{{entry.get_absolute_url}}#comments">...</a>
 </span>
+{% if user == entry.author %}
+<span class="item"><i class="icon-edit"></i>
+    <a href="{% url admin:blog_entry_change entry.pk %}">编辑</a></span>
+{% endif %}

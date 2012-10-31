@@ -79,7 +79,7 @@
 }
 #comments #ds-thread #ds-reset .ds-comments .ds-post .ds-post-self .ds-post-main {
   position: relative;
-  background: rgba(228, 245, 209, 0.38) !important;
+  background: rgba(228, 245, 209, 0.38);
   padding: 15px 15px 10px 10px !important;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -280,12 +280,91 @@
 * {
   outline: 0;
 }
+#flatlist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#flatlist li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
 body {
   background-color: #fefefe;
 }
 .container {
   max-width: 1000px;
   _width: 900px;
+}
+.container #admin-bar {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(18, 18, 18, 0.8);
+  background-image: -moz-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(30, 30, 30, 0.8)), to(rgba(0, 0, 0, 0.8)));
+  background-image: -webkit-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
+  background-image: -o-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
+  background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
+  background-repeat: repeat-x;
+  *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc1e1e1e', endColorstr='#cc000000', GradientType=0);
+  background-color: transparent;
+  border-bottom: 1px solid #333;
+  box-shadow: 1px 0 5px #333;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-size: 12px;
+  line-height: 2;
+  -webkit-transition: 1.5s ease-out;
+  -moz-transition: 1.5s ease-out;
+  -o-transition: 1.5s ease-out;
+  transition: 1.5s ease-out;
+}
+.container #admin-bar:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  height: 24px;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+.container #admin-bar,
+.container #admin-bar a {
+  color: #FEFEFE;
+  text-decoration: none;
+}
+.container #admin-bar h1 {
+  float: left;
+  margin: 0;
+  padding: 0 15px;
+  font-size: 12px;
+  line-height: 2;
+}
+.container #admin-bar ul.quicklinks {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  float: right;
+  padding: 0 15px 0 0;
+}
+.container #admin-bar ul.quicklinks li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.container #admin-bar ul.quicklinks li {
+  padding: 0 3px;
+  text-shadow: 0 0 1px #000;
+}
+.container #admin-bar ul.quicklinks li:hover a:hover {
+  color: #FFF;
+  text-shadow: none;
+  font-weight: bold;
 }
 .container .header {
   margin: 0;

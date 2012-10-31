@@ -1,5 +1,3 @@
-计算文章点击数(异步不存非必要数据)
-
 图志页面底部自动加载更多
 
 随机文章列表 随机标签
@@ -12,10 +10,8 @@
 
 plog 的 get.html 模板
 
-插入到文章中的外部链接在新标签中打开, 考虑js添加target?
-
 BUG: blog.query视图中的日期过滤不是按照当地时间的.
 
-清除ckeditor plugins目录下不需要的插件
-
 per function cache
+
+html 消毒

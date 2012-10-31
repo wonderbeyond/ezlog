@@ -59,6 +59,16 @@
 </head>
 <body class="{% block bodyclass %}base{% endblock %}">
   <div class="container">
+    {% if user.is_superuser %}
+    <div id="admin-bar">
+        <h1><a href="{% url admin:index %}">管理</a></h1>
+        <ul class="quicklinks">
+            <li><a href="{% url admin:blog_entry_add %}">添加文章</a></li>
+            <li><a href="{% url admin:pages_page_add %}">添加页面</a></li>
+            <li><a href="{% url ezconf.index %}">站点参数</a></li>
+        </ul>
+    </div>
+    {% endif %}
     <!--页面头部-->
     <div class="row-fluid header">
         <div>

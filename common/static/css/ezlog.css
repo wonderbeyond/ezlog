@@ -667,6 +667,19 @@ body {
   margin: 6px 0 16px 0;
   line-height: 1.6;
 }
+.container .content-wrapper #main .article.complete .content h2 {
+  font-size: 1.5em;
+}
+.container .content-wrapper #main .article.complete .content h3 {
+  font-size: 1.2em;
+}
+.container .content-wrapper #main .article.complete .content hr {
+  background: transparent url("/static/img/hr_bg.png") repeat-x 0 0;
+  border: 0 none;
+  color: #CCC;
+  height: 4px;
+  padding: 0;
+}
 .container .content-wrapper #main .article.complete .content img {
   max-width: 98%;
   border-radius: 5px;

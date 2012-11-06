@@ -1,6 +1,7 @@
 # coding=utf-8
 from django.contrib import admin
 from django import forms
+from django.conf import settings
 
 from blog.models import *
 from blog.forms import *
@@ -37,14 +38,12 @@ class EntryAdmin(admin.ModelAdmin):
     make_private.short_description = u'取消开放所选文章'
 
     class Media:
-        js = ('admin/js/blog/article_edit.js',
-              'ckeditor/ckeditor.js',
-              'ckeditor/config.js',
-              'js/ckeditor-setup.js',
-              'filebrowser/js/FB_CKEditor.js',
-             )
+        js = ('admin/js/blog/article_edit.js',) + \
+                settings.MEDIA_FOR_POST_EDITOR[settings.MARKUP_LANGUAGE]['js']
+
         css = {
-            'all': ('admin/article_page_fix.css',)
+            'all': ('admin/article_page_fix.css',) + \
+                settings.MEDIA_FOR_POST_EDITOR[settings.MARKUP_LANGUAGE]['css']
         }
 
 admin.site.register(Category, CategoryAdmin)

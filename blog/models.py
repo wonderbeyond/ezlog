@@ -5,6 +5,10 @@ from django.contrib.auth.admin import User
 from django.core.cache import cache
 from django.utils.html import strip_tags
 
+from django.contrib.markup.templatetags.markup import markdown
+from django.contrib.markup.templatetags.markup import textile
+from django.contrib.markup.templatetags.markup import restructuredtext
+
 import os, re, time, cgi
 from pyquery import PyQuery as pq
 from filebrowser.base import FileObject
@@ -68,7 +72,7 @@ class Entry(BaseModel):
         return self.title
 
     def char_count(self):
-        return len(strip_tags(self.content))
+        return len(strip_tags(self.html_content))
 
     def tags_cs(self):
         '''Return comma separated tags, used for django-admin'''
@@ -79,9 +83,30 @@ class Entry(BaseModel):
         '''列出附加到当前对象的标签'''
         return self.tags.all()
 
+    @property
+    def html_content(self):
+        """Return the entry's content formatted in HTML"""
+        def asserted_html(s):
+            return ( re.match(r'^\s*<\w+>', s) or
+                     re.match(r'^\s*<\w+\s+.*>', s)
+                   ) and re.search(r'</\w+>\s*$', s)
+
+        if asserted_html(self.content):
+            print "ASSERT HTML"
+            return self.content
+        elif settings.MARKUP_LANGUAGE == 'markdown':
+            return markdown(self.content, 'abbr,tables,smart_strong')
+        elif settings.MARKUP_LANGUAGE == 'restructuredtext':
+            return restructuredtext(self.content)
+        elif '</p>' not in self.content:
+            return linebreaks(self.content)
+        else:
+            return self.content
+        
+
     def generate_summary(self, nchars=200):
         '''提出摘要, 最终返回以HTML片段. 代表插图 + 前N个文字'''
-        orig_html = pq(self.content)
+        orig_html = pq(self.html_content)
         # 优先提取带有 cover 类的图片作为封面
         cover = orig_html('img.cover:first') or orig_html('img:first')
         if cover:

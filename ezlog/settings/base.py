@@ -17,6 +17,32 @@ COMPRESS_ENABLED = False
 COMPRESS_PARSER = 'compressor.parser.LxmlParser'
 COMPRESS_OFFLINE = True
 
+EXTENSION_PATH = TO_ABS_PATH('extensions');
+MARKUP_LANGUAGE = 'markdown' # 'restructuredtext'
+MEDIA_FOR_POST_EDITOR = {
+    'html': {
+        'js': ('ckeditor/ckeditor.js',
+               'ckeditor/config.js',
+               'js/ckeditor-setup.js',
+               'filebrowser/js/FB_CKEditor.js',
+              ),
+        'css': (),
+    },
+
+    'markdown': {
+        'js': ('wmd/showdown.js',
+               'wmd/wmd.js',),
+        'css': ('wmd/wmd.css',),
+    },
+
+    'restructuredtext': {
+        'js': (),
+        'css': (),
+    }
+}
+
+
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )

@@ -6,7 +6,7 @@
     <div class="article-info">
       {% include "blog/article-info.html" %}
     </div>
-    <div class="content">{{entry.content|safe}}</div>
+    <div class="content">{{entry.html_content|safe}}</div>
   </div>
   <div id="comments">
       <div class="ds-thread" data-thread-key="blog.{{entry.pk}}" data-title="{{entry.title}}"

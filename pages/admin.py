@@ -11,6 +11,9 @@ class PageAdmin(MPTTModelAdmin):
                     'public', 'allow_comment', 'in_navigation')
     list_filter = ('created', 'modified', 'public')
     search_fields = ('title', 'content')
+
+    change_list_template = 'admin/pages/page/change_list.html'
+
     class Media:
         js = ('ckeditor/ckeditor.js',
               'ckeditor/config.js',

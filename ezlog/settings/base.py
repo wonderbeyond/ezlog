@@ -183,8 +183,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.messages.context_processors.messages",
 
     "ezconf.context_processors.settings",
-    "ezconf.context_processors.friend_links",
-    "ezconf.context_processors.nav_pages",
+    "common.context_processors.friend_links",
+    "pages.context_processors.nav_pages",
 )
 
 MIDDLEWARE_CLASSES = (

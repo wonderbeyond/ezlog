@@ -25,20 +25,12 @@ class CustomIndexDashboard(Dashboard):
         # append an app list module for "Applications"
         self.children.append(modules.AppList(
             _('Content Management'),
-            collapsible=True,
+            collapsible=False,
             column=1,
             css_classes=('collapse closed',),
-            exclude=('django.contrib.*', 'ezconf.*'),
+            models=('blog.*', 'pages.*', 'plog.*', 'common.*'),
         ))
 
-        self.children.append(modules.ModelList(
-            _('Nav and Links'),
-            column=1,
-            collapsible=False,
-            models=('ezconf.*',),
-        ))
-
-        
         # append an app list module for "Administration"
         self.children.append(modules.ModelList(
             _('Django Administration'),

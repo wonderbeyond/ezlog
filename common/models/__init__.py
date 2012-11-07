@@ -1,0 +1,1 @@
+from friendlink import *

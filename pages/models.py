@@ -19,6 +19,10 @@ class Page(MPTTModel):
     class Meta:
         verbose_name = u'简单页面'
         verbose_name_plural = u'简单页面'
+        ordering = ['title']
+
+    class MPTTMeta:
+        order_insertion_by=['title']
 
     @models.permalink
     def get_absolute_url(self):

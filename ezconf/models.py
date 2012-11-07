@@ -2,21 +2,6 @@
 from django.db import models
 from pages.models import Page
 
-class NavPage(models.Model):
-    title = models.CharField(verbose_name=u'标题', max_length=50, unique=True)
-    content = models.TextField(verbose_name=u'内容')
-
-    class Meta:
-        verbose_name = u'导航页面'
-        verbose_name_plural = u'导航页面'
-
-    @models.permalink
-    def get_absolute_url(self):
-        return('navpage.get', [str(self.id)])
-
-    def __unicode__(self):
-        return self.title
-
 class FriendLink(models.Model):
     name = models.CharField(verbose_name=u'名称', max_length=100, unique=True)
     desc = models.CharField(verbose_name=u'简单描述', max_length=200, null=True, blank=True)

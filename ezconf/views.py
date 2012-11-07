@@ -41,14 +41,6 @@ def save_settings(request):
 
     return HttpResponseRedirect(redirect_to)
 
-def get_nav_page(request, pid):
-    page = get_object_or_404(NavPage, pk=pid)
-    context = {
-        'page': page,
-    }
-    return render_to_response('ezconf/nav-page.html', context,
-                              context_instance=RequestContext(request))
-
 @staff_member_required
 def export_settings(request):
     return HttpResponse(ezsettings.as_readable_json(),

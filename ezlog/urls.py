@@ -17,7 +17,6 @@ urlpatterns = patterns('',
     url(r'^settings/',  include('ezconf.urls')),
     url(r'^i/',         include('plog.urls')),
     url(r'^p/',         include('pages.urls')),
-    url(r'^np/(?P<pid>\d+)/$', 'ezconf.views.get_nav_page', name='navpage.get'),
 ) + blog.urls.urlpatterns
 
 urlpatterns += staticfiles_urlpatterns()

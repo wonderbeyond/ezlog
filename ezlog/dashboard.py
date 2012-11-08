@@ -59,11 +59,6 @@ class CustomIndexDashboard(Dashboard):
                 'url': reverse('ezconf.import_settings'),
                 'external': False,
             },
-            {
-                'title': _('Update setting items'),
-                'url': reverse('ezconf.update_setting_items'),
-                'external': False,
-            }
             ]
         ))
         

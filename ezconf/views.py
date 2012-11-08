@@ -59,16 +59,3 @@ def import_settings(request):
         form = ImportSettingsForm()
     return render_to_response('ezconf/import_settings.html', locals(),
                              context_instance=RequestContext(request))    
-
-def update_setting_items(request):
-    from forms import UpdateSettingItemsForm
-    title = _('Update setting items')
-    if request.method == 'POST':
-        form = UpdateSettingItemsForm(request.POST, request.FILES)
-        if form.is_valid():
-            ezsettings.update_setting_items_with_json_data(request.FILES['file'].read())
-            return HttpResponseRedirect(reverse('ezconf.index'))
-    else:
-        form = UpdateSettingItemsForm()
-    return render_to_response('ezconf/update_setting_itmes.html', locals(),
-                             context_instance=RequestContext(request))    

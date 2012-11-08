@@ -25,14 +25,14 @@
                 "verbose_name": "主题名称", 
                 "type": "text", 
                 "name": "theme_name", 
-                "value": "保留以后使用", 
+                "value": "", 
                 "desc": "请输入要使用的主题名称"
-            },
+            }, 
             {
                 "verbose_name": "版权信息", 
                 "type": "text", 
                 "name": "copyright", 
-                "value": "Copyright © 2012 xxx."
+                "value": "Copyright © 2012 Wonder. 保留所有权利, 除非另有说明."
             }
         ], 
         "verbose_name": "一般配置", 
@@ -44,7 +44,7 @@
                 "verbose_name": "每页显示文章数", 
                 "type": "number", 
                 "name": "articles_per_page", 
-                "value": "8"
+                "value": "10"
             }
         ], 
         "verbose_name": "博客设置", 

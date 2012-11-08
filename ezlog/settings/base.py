@@ -18,6 +18,9 @@ COMPRESS_PARSER = 'compressor.parser.LxmlParser'
 COMPRESS_OFFLINE = True
 
 EXTENSION_PATH = TO_ABS_PATH('extensions');
+
+EZCONF_DEFAULT_SETTINGS_FILE = TO_ABS_PATH('ezconf/default_settings.json')
+
 MARKUP_LANGUAGE = 'markdown' # 'restructuredtext'
 MEDIA_FOR_POST_EDITOR = {
     'html': {

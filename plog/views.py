@@ -22,8 +22,8 @@ def _base_context(request):
 
 def get(request, eid):
     entry = get_object_or_404(PhotoLog, pk=eid, public=True)
-    context = { 'photo': entry, }
-    return render_to_response('plog/get.html', context,
+    context = { 'photo_list': [entry], }
+    return render_to_response('plog/list.html', context,
             context_instance=RequestContext(request, processors=[_base_context]))
 
 def query(request, **kwargs):

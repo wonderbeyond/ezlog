@@ -15,6 +15,14 @@
     <div class="meta-data">
         <span class="item created-time"><i class="icon-time"></i> {{pl.created|date:'Y-m-d H:i'}}</span>
         <a href="{{pl.category.get_absolute_url}}" class="item category"><i class="icon-th-large"></i> {{pl.category}}</a>
+        {% if pl.tags.all %}
+        <span class="item tags"><i class="icon-tags"></i>
+            {% for t in pl.tags.all %}
+            <a class="tag-item" href="{% url plog.query tag=t.id %}">{{t.name}}</a>
+            {% endfor %}
+        </span>
+        {% endif %}
+
     </div>
     <a href="{{pl.photo.url}}" title="{{pl.title}}">
         {% version_object pl.photo 'medium' as thumbnail %}

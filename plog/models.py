@@ -38,7 +38,7 @@ class PhotoLog(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('plog.get', [str(self.id)], {})        
+        return ('plog.get', [str(self.id)], {})
     
     def __unicode__(self):
         return self.title

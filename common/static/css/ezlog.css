@@ -534,31 +534,24 @@ body {
   line-height: 10px;
   padding: 0;
   margin: 0;
-  border: 1px solid #CCC;
+  border: 1px solid #333;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  background-color: #e3e3e3;
-  background-image: -moz-linear-gradient(top, #fefefe, #bbbbbb);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#bbbbbb));
-  background-image: -webkit-linear-gradient(top, #fefefe, #bbbbbb);
-  background-image: -o-linear-gradient(top, #fefefe, #bbbbbb);
-  background-image: linear-gradient(to bottom, #fefefe, #bbbbbb);
+  background-color: #2c2c2c;
+  background-image: -moz-linear-gradient(top, #333333, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
+  background-image: -webkit-linear-gradient(top, #333333, #222222);
+  background-image: -o-linear-gradient(top, #333333, #222222);
+  background-image: linear-gradient(to bottom, #333333, #222222);
   background-repeat: repeat-x;
-  *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefefe', endColorstr='#ffbbbbbb', GradientType=0);
-  color: #333;
-  text-shadow: 0 1px 1px #FFF;
+  *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff222222', GradientType=0);
+  color: #F0F0F0;
+  text-shadow: 0 -1px 1px #000000;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
 .container .header .global-nav.vertical .search-form button:hover {
-  background-color: #e0e0e0;
-  background-image: -moz-linear-gradient(top, #cccccc, #fefefe);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cccccc), to(#fefefe));
-  background-image: -webkit-linear-gradient(top, #cccccc, #fefefe);
-  background-image: -o-linear-gradient(top, #cccccc, #fefefe);
-  background-image: linear-gradient(to bottom, #cccccc, #fefefe);
-  background-repeat: repeat-x;
-  *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcccccc', endColorstr='#fffefefe', GradientType=0);
+  text-shadow: none;
 }
 .container .header .global-nav.vertical ul.nav-links {
   clear: both;

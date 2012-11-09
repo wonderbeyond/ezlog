@@ -292,6 +292,7 @@
 }
 body {
   background-color: #fefefe;
+  background-image: url(/static/img/body_bg.png);
 }
 .container {
   max-width: 1000px;

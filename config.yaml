@@ -1,8 +1,13 @@
 name: ezlog
 version: 1
-
 libraries:
 - name: django
   version: "1.4"
 - name: lxml
   version: 2.3.4
+handle:
+- compress:  if ( out_header["Content-type"] ~ "text/css" ) compress
+- compress:  if ( out_header["Content-type"] ~ "text/javascript" ) compress
+- compress:  if ( out_header["Content-type"] ~ "text/html" ) compress
+- compress:  if ( out_header["Content-type"] ~ "image/png" ) compress
+- compress:  if ( out_header["Content-type"] ~ "image/jpeg" ) compress

@@ -13,8 +13,8 @@ TO_ABS_PATH = lambda p: os.path.join(PROJECT_ROOT, p)
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-COMPRESS_ENABLED = False
-COMPRESS_PARSER = 'compressor.parser.LxmlParser'
+COMPRESS_ENABLED = True
+#COMPRESS_PARSER = 'compressor.parser.LxmlParser'
 COMPRESS_OFFLINE = True
 
 EXTENSION_PATH = TO_ABS_PATH('extensions');

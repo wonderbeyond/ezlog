@@ -12,6 +12,7 @@
 
 - django-mptt
 
+- python-markdown
 
 ## setup:
 

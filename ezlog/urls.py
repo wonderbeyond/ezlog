@@ -7,8 +7,15 @@ admin.autodiscover()
 
 from filebrowser.sites import site
 
+from blog.sitemap import BlogSitemap
+from pages.sitemap import PageSitemap
+
+sitemaps = {
+    'blog': BlogSitemap,
+    'pages': PageSitemap,
+}
+
 urlpatterns = patterns('',
-    #url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps':sitemaps}),
     url(r'^admin/filebrowser/', include(site.urls)),
     url(r'^admin/doc/',  include('django.contrib.admindocs.urls')),
     url(r'^admin/',      include(admin.site.urls)),
@@ -18,6 +25,9 @@ urlpatterns = patterns('',
     url(r'^i/',          include('plog.urls')),
     url(r'^p/',          include('pages.urls')),
     url(r'^ezsettings/', include('ezconf.urls')),
+
+    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps':sitemaps}),
+    url(r'^robots\.txt$', 'django.views.generic.simple.redirect_to', {'url': '/static/robots.txt'}),
 )
 
 urlpatterns += staticfiles_urlpatterns()

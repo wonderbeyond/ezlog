@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cate/
+Disallow: /tag/
+Disallow: /yead/
+Disallow: /month/
+Disallow: /day/
+Disallow: /ymd/
+Disallow: /ym/
+Disallow: /i/

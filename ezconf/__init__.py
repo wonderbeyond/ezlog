@@ -74,5 +74,5 @@ class EZSettings(object):
 try:
     from django.db.utils import DatabaseError
     ezsettings = EZSettings()
-except: # maybe database not synced!
+except DatabaseError: # may under command `manage.py syncdb`
     pass

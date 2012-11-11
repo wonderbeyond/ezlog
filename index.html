@@ -39,32 +39,121 @@
         <ul></ul>
       </nav>
       <section>
-        <h3>Welcome to GitHub Pages.</h3>
+        <h1>EZLog</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p><strong>Easy Blog System</strong></p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<h2>简介</h2>
+
+<p>EZLog是用 <a href="https://www.djangoproject.com/">Django</a> 开发的个人博客系统， 也可以用来做个人网站。欢迎试用！</p>
+
+<h2>示例站点</h2>
+
+<ul>
+<li>  <a href="http://ezlog.sinaapp.com">http://ezlog.sinaapp.com</a>/</li>
+<li>  <a href="http://hoiyeung.sinaapp.com">http://hoiyeung.sinaapp.com</a>/</li>
+</ul><h2>特性</h2>
+
+<ul>
+<li><p>通过标签和分类来管理文章</p></li>
+<li><p>可选择使用 Markdown 或者 HTML 撰写博客，并分别提供对应的编辑器组件</p></li>
+<li><p>集成 <a href="http://duoshuo.com/">多说社会化评论框</a></p></li>
+<li><p>集成 <a href="http://www.google.cn/intl/zh-CN_ALL/analytics/">Google Analytics</a></p></li>
+<li><p>最近访客跟踪</p></li>
+<li><p>使用 <a href="https://github.com/sehmaschine/django-grappelli">Django Grappelli</a> 优化后台管理界面</p></li>
+<li><p>使用 <a href="https://github.com/sehmaschine/django-filebrowser">Django FileBrowser</a> 管理上传的文件</p></li>
+<li><p>层次化的页面管理</p></li>
+<li><p>可配置的站点导航栏</p></li>
+<li><p>通过WEB界面配置站点参数</p></li>
+<li><p>站点地图</p></li>
+</ul><h2>依赖的Python模块</h2>
+
+<ul>
+<li><p>Django==1.4.1</p></li>
+<li><p>pyquery</p></li>
+<li><p>lxml(needed by pyquery)</p></li>
+<li><p>django-taggit(SAE环境下需要修改代码)</p></li>
+<li><p>django-grappelli</p></li>
+<li><p>django-filebrowser</p></li>
+<li><p>PIL(needed by django-filebrowser, PIL needs libjpeg libjpeg-dev)</p></li>
+<li><p>South</p></li>
+<li><p>django-compressor</p></li>
+<li><p>django-mptt</p></li>
+<li><p>Markdown</p></li>
+</ul><h2>测试运行</h2>
+
+<ul>
+<li>
+<p>获取EZLog代码:</p>
+
+<pre><code>$ git clone https://github.com/wonderbeyond/ezlog.git
+</code></pre>
+</li>
+<li>
+<p>安装依赖模块:</p>
+
+<pre><code>$ cd ezlog
+$ pip install -r requirements.txt
+</code></pre>
+</li>
+<li>
+<p>初始化数据库:</p>
+
+<pre><code>$ mkdir data
+$ make syncdb
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>请在命令执行过程中根据提示创建超级用户。</p>
+</li>
+<li>
+<p>搜集静态文件到 settings.STATIC_ROOT 文件夹:</p>
 
-<h3>Designer Templates</h3>
+<pre><code>$ mkdir static
+$ make collectstatic
+</code></pre>
+</li>
+</ul><p>OK，现在可以测试运行了。
+这里使用Django提供测试服务器来运行，请不要应用于生产环境中！
+生产环境下的部署方案请参考Django文档:
+<a href="https://docs.djangoproject.com/en/1.4/howto/deployment">https://docs.djangoproject.com/en/1.4/howto/deployment</a>/</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<pre><code>$ python manage.py runserver 8000
+</code></pre>
 
-<h3>Rather Drive Stick?</h3>
+<p>如果看到如下提示:</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<pre><code>Development server is running at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+</code></pre>
 
-<h3>Authors and Contributors</h3>
+<p>说明网站运行成功！打开浏览器，访问 <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>/ 查看效果，
+访问 <a href="http://127.0.0.1:8000/admin">http://127.0.0.1:8000/admin</a>/ 可执行后台管理,
+需要使用刚刚创建的superuser登录。</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>在实际使用时，请访问 <a href="http://localhost:8000/ezsettings">http://localhost:8000/ezsettings</a>/
+并根据需要修改站点参数，在admin管理界面可以看到该链接。</p>
 
-<h3>Support or Contact</h3>
+<h2>配置</h2>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h3>设置 sites.site</h3>
+
+<p>为了保证各个模块获得正确的信息（比如站点地图要生成网站的链接）， 请访问
+<a href="http://localhost:8000/admin/sites/site/">http://localhost:8000/admin/sites/site/</a>, 然后把域名 <em>example.com</em>
+修改为你正在使用的域名。</p>
+
+<h3>Django settings</h3>
+
+<p>EZLog项目中，settings.py被拆分成一个包，由__init__.py负责导入所有设置。</p>
+
+<ul>
+<li><p>base.py: 提供基本设置，优先级最低</p></li>
+<li><p>for_heroku.py: 提供针对Heroku环境的设置</p></li>
+<li><p>for_sae.py: 提供针对SAE环境的设置</p></li>
+<li><p>dev.py: 提供特定于测试环境下的设置</p></li>
+<li><p>production.py: 提供特定于生产环境下的设置</p></li>
+<li><p>switcher.py: 用来切换生产环境和测试环境的设置</p></li>
+<li><p>local.py: 提供你针对自己网站的设置，优先级最高</p></li>
+</ul>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/wonderbeyond">wonderbeyond</a></p>

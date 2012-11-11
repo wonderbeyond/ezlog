@@ -47,6 +47,15 @@ class Category(BaseModel):
     def __unicode__(self):
         return self.name
 
+class EntryManager(models.Manager):
+    '''return accessible objects for specified user'''
+    def accessibles(self, user):
+        if user.is_superuser:
+            entries = Entry.objects.all()
+        else:
+            entries = Entry.objects.filter(public=True)
+        return entries
+
 class Entry(BaseModel):
     title = models.CharField(max_length=200, unique=True,
                              verbose_name=u'标题')
@@ -58,6 +67,8 @@ class Entry(BaseModel):
     modified = models.DateTimeField(auto_now=True, verbose_name=u'修改时间')
     public = models.BooleanField(default=True, verbose_name=u'是否公开')
     views = models.PositiveIntegerField(verbose_name=u'浏览次数', default=0, editable=False)
+
+    objects = EntryManager()
 
     class Meta(BaseModel.Meta):
         verbose_name = "文章"

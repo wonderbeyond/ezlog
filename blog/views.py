@@ -22,13 +22,16 @@ def _base_context(request):
     }
 
 def get(request, eid):
-    entry = get_object_or_404(Entry, pk=eid, public=True)
+    if request.user.is_superuser:
+        entry = get_object_or_404(Entry, pk=eid)
+    else:
+        entry = get_object_or_404(Entry, pk=eid, public=True)
     context = { 'entry': entry, }
     return render_to_response('blog/article.html', context,
             context_instance=RequestContext(request, processors=[_base_context]))
 
 def query(request, **kwargs):
-    entries = Entry.objects.filter(public=True)
+    entries = Entry.objects.accessibles(request.user)
 
     queries = QueryDict('').copy()
     queries.update(kwargs)

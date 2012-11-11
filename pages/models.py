@@ -3,6 +3,15 @@ from django.utils.translation import ugettext_lazy as _
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 
+class PageManager(models.Manager):
+    '''return accessible objects for specified user'''
+    def accessibles(self, user):
+        if user.is_superuser:
+            entries = Page.objects.all()
+        else:
+            entries = Page.objects.filter(public=True)
+        return entries
+
 class Page(MPTTModel):
     '''简单页面'''
     title = models.CharField(verbose_name=u'标题', max_length=50, unique=True)
@@ -15,6 +24,8 @@ class Page(MPTTModel):
     public = models.BooleanField(verbose_name=u'发布', default=False)
     allow_comment = models.BooleanField(verbose_name=u'允许评论', default=True)
     in_navigation = models.BooleanField(verbose_name=u'添加到导航', default=False)
+
+    objects = PageManager()
 
     class Meta:
         verbose_name = u'简单页面'

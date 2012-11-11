@@ -6,7 +6,11 @@ from django.shortcuts import render_to_response, get_object_or_404
 from pages.models import *
 
 def get(request, pid):
-    page = get_object_or_404(Page, pk=pid, public=True)
+    if request.user.is_superuser:
+        page = get_object_or_404(Page, pk=pid)
+    else:
+        page = get_object_or_404(Page, pk=pid, public=True)
+
     context = {
         'page': page,
     }

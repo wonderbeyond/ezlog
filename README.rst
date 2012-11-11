@@ -23,6 +23,8 @@ EZLog是用 `Django <https://www.djangoproject.com/>`_ 开发的个人博客系�
 特性
 ======
 
+- `响应式的WEB页面设计 <http://en.wikipedia.org/wiki/Responsive_web_design>`_, 能够自适应不同尺寸的屏幕
+
 - 通过标签和分类来管理文章
 
 - 可选择使用 Markdown 或者 HTML 撰写博客，并分别提供对应的编辑器组件

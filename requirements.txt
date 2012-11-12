@@ -13,7 +13,7 @@ django-filebrowser==3.5.0
 django-grappelli==2.4.0
 django-mptt==0.5.4
 django-taggit==0.9.3
-lxml==3.0alpha2
+lxml>=2.3.4
 pyquery==1.2.1
 versiontools==1.9.1
 wsgiref==0.1.2

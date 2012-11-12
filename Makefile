@@ -8,6 +8,7 @@ rmpyc:
 	find . -type f -name "*.pyc"|xargs rm -rf
 
 syncdb:
+	[ -d data ] || mkdir data
 	$(MANAGE) syncdb
 	$(MANAGE) migrate blog
 	$(MANAGE) migrate plog
@@ -21,5 +22,6 @@ makemessages:
 	$(MANAGE) makemessages -i '*django/*' -l zh_CN
 
 collectstatic:
+	[ -d static ] || mkdir static
 	$(MANAGE) compress
 	$(MANAGE) collectstatic

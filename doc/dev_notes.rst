@@ -1,8 +1,9 @@
 EZLog 开发笔记
 ==============
 
-这里记录在该系统开发过程中遇到过的问题及解决方法。
+这里记录在该系统的开发测试过程中遇到过的问题及解决方法。
 
+EZLog在Ubuntu 12.04环境下开发完成，不同平台可能会遇到不同的问题。
 
 解决virtualenv中安装PIL出现的 `IOError: decoder jpeg not available` 问题
 -------------------------------------------------------------------------
@@ -82,3 +83,13 @@ admin界面找不到模板
         font-size: 13px;
         line-height: 18px;
     }
+
+
+pip安装MySQL-python遇到 `EnvironmentError: mysql_config not found` 错误
+------------------------------------------------------------------------
+
+参考资料: http://zhoujianghai.iteye.com/blog/1520666
+
+::
+    
+    sudo apt-get install libmysqld-dev

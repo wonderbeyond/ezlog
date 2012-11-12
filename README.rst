@@ -120,6 +120,12 @@ OK，现在可以测试运行了。
 在实际使用时，请访问 http://localhost:8000/ezsettings/
 并根据需要修改站点参数，在admin管理界面可以看到该链接。
 
+.. note:: 如果你在测试或部署EZLog时遇到了问题，
+    可以先看看我的 开发笔记_
+    里面有没有提到对应问题的解决方法。
+    也可以在新浪微博上 `@workwonder <http://weibo.com/wber>`_ 向我反馈,
+    或者在这里留言: http://ezlog.sinaapp.com/20/#comments.
+
 
 配置
 ====
@@ -149,3 +155,5 @@ EZLog项目中，settings.py被拆分成一个包，由__init__.py负责导入�
 - switcher.py: 用来切换生产环境和测试环境的设置
 
 - local.py: 提供你针对自己网站的设置，优先级最高
+
+.. _开发笔记: https://github.com/wonderbeyond/ezlog/blob/master/doc/dev_notes.rst

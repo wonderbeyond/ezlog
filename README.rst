@@ -27,7 +27,7 @@ EZLog是用 `Django <https://www.djangoproject.com/>`_ 开发的个人博客系�
 
 - 通过标签和分类来管理文章
 
-- 可选择使用 Markdown 或者 HTML 撰写博客，并分别提供对应的编辑器组件
+- 可选择使用 Markdown_ 或者 HTML 撰写博客，并分别提供对应的编辑器组件
 
 - 集成 `多说社会化评论框 <http://duoshuo.com/>`_
 
@@ -50,14 +50,21 @@ EZLog是用 `Django <https://www.djangoproject.com/>`_ 开发的个人博客系�
 - 站点地图
 
 
-依赖的Python模块
-================
+依赖关系
+========
+
+- Python2.7 或更高版本
+
+- libxml2, libxslt1.1 (needed by lxml)
+
+依赖的python模块
+----------------
 
 - Django==1.4.1
 
 - pyquery
   
-- lxml(needed by pyquery)
+- lxml>=2.3.4 (needed by pyquery)
 
 - django-taggit(SAE环境下需要修改代码)
 
@@ -83,21 +90,23 @@ EZLog是用 `Django <https://www.djangoproject.com/>`_ 开发的个人博客系�
 
     $ git clone https://github.com/wonderbeyond/ezlog.git
 
-- 安装依赖模块::
+- 安装某些python模块所需的库文件(以Ubuntu环境为例)::
+
+    $ sudo apt-get install libxml2-dev libxslt1-dev
+
+- 安装python模块::
 
     $ cd ezlog
     $ pip install -r requirements.txt
 
 - 初始化数据库::
 
-    $ mkdir data
     $ make syncdb
 
   请在命令执行过程中根据提示创建超级用户。
 
 - 搜集静态文件到 settings.STATIC_ROOT 文件夹::
 
-    $ mkdir static
     $ make collectstatic
 
 OK，现在可以测试运行了。
@@ -157,3 +166,4 @@ EZLog项目中，settings.py被拆分成一个包，由__init__.py负责导入�
 - local.py: 提供你针对自己网站的设置，优先级最高
 
 .. _开发笔记: https://github.com/wonderbeyond/ezlog/blob/master/doc/dev_notes.rst
+.. _Markdown: http://zh.wikipedia.org/wiki/Markdown

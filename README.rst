@@ -120,7 +120,7 @@ OK，现在可以测试运行了。
 在实际使用时，请访问 http://localhost:8000/ezsettings/
 并根据需要修改站点参数，在admin管理界面可以看到该链接。
 
-.. note:: 如果你在测试或部署EZLog时遇到了问题，
+.. Note:: 如果你在测试或部署EZLog时遇到了问题，
     可以先看看我的 开发笔记_
     里面有没有提到对应问题的解决方法。
     也可以在新浪微博上 `@workwonder <http://weibo.com/wber>`_ 向我反馈,

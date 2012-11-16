@@ -14,8 +14,16 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 COMPRESS_ENABLED = True
-COMPRESS_PARSER = 'compressor.parser.LxmlParser'
 COMPRESS_OFFLINE = True
+COMPRESS_PARSER = 'compressor.parser.LxmlParser'
+COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter']
+
+try:
+    import cssmin
+except ImportError:
+    pass
+else:
+    COMPRESS_CSS_FILTERS.append('compressor.filters.cssmin.CSSMinFilter')
 
 EXTENSION_PATH = TO_ABS_PATH('extensions');
 

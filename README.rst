@@ -84,6 +84,11 @@ EZLog是用 `Django <https://www.djangoproject.com/>`_ 开发的个人博客系�
 
 - Markdown
 
+可选模块
+~~~~~~~~
+
+- cssmin_ (used to compress css file)
+
 
 测试运行
 ========
@@ -169,3 +174,5 @@ EZLog项目中，settings.py被拆分成一个包，由__init__.py负责导入�
 
 .. _开发笔记: https://github.com/wonderbeyond/ezlog/blob/master/doc/dev_notes.rst
 .. _Markdown: http://zh.wikipedia.org/wiki/Markdown
+
+.. _cssmin: https://github.com/zacharyvoase/cssmin

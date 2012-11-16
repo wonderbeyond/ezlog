@@ -115,6 +115,7 @@ EZLog是用 `Django <https://www.djangoproject.com/>`_ 开发的个人博客系�
 - 搜集静态文件到 settings.STATIC_ROOT 文件夹::
 
     $ make collectstatic
+    $ make compressstatic  #如果没有启用静态文件压缩，则不用执行该命令。
 
 OK，现在可以测试运行了。
 这里使用Django提供测试服务器来运行，请不要应用于生产环境中！
@@ -171,6 +172,12 @@ EZLog项目中，settings.py被拆分成一个包，由__init__.py负责导入�
 - switcher.py: 用来切换生产环境和测试环境的设置
 
 - local.py: 提供你针对自己网站的设置，优先级最高
+
+  执行如下命令创建local.py::
+
+      $ cp ezlog/settings/local.sample ezlog/settings/local.py
+
+
 
 .. _开发笔记: https://github.com/wonderbeyond/ezlog/blob/master/doc/dev_notes.rst
 .. _Markdown: http://zh.wikipedia.org/wiki/Markdown

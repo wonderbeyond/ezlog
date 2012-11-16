@@ -23,5 +23,7 @@ makemessages:
 
 collectstatic:
 	[ -d static ] || mkdir static
-	$(MANAGE) compress
 	$(MANAGE) collectstatic
+
+compressstatic:
+	$(MANAGE) compress

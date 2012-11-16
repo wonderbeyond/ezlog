@@ -64,7 +64,9 @@ EZLog是用 `Django <https://www.djangoproject.com/>`_ 开发的个人博客系�
 
 - pyquery
   
-- lxml>=2.3.4 (needed by pyquery)
+- lxml>=2.3.4(needed by pyquery&compressor.parser.LxmlParser)
+
+- BeautifulSoup<4.0(needed by compressor.parser.LxmlParser)
 
 - django-taggit(SAE环境下需要修改代码)
 

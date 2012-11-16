@@ -13,7 +13,7 @@ TO_ABS_PATH = lambda p: os.path.join(PROJECT_ROOT, p)
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False
 COMPRESS_OFFLINE = True
 COMPRESS_PARSER = 'compressor.parser.LxmlParser'
 COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter']
@@ -29,7 +29,7 @@ EXTENSION_PATH = TO_ABS_PATH('extensions');
 
 EZCONF_DEFAULT_SETTINGS_FILE = TO_ABS_PATH('ezconf/default_settings.json')
 
-MARKUP_LANGUAGE = 'markdown' # 'restructuredtext'
+MARKUP_LANGUAGE = 'markdown'
 MEDIA_FOR_POST_EDITOR = {
     'html': {
         'js': ('ckeditor/ckeditor.js',
@@ -330,4 +330,3 @@ CKEDITOR_CONFIGS = {
 
 GRAPPELLI_INDEX_DASHBOARD = 'ezlog.dashboard.CustomIndexDashboard'
 GRAPPELLI_ADMIN_TITLE = _('EZLog Management')
-DUOSHUO_SHORT_NAME = ''

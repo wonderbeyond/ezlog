@@ -1,2 +1,7 @@
 # coding='utf-8'
-DUOSHUO_SHORT_NAME='ezlog'
+
+DEBUG=True
+
+MARKUP_LANGUAGE = 'markdown' # Or 'html'
+
+COMPRESS_ENABLED=True # Enables js/css files compression

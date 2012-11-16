@@ -173,9 +173,86 @@ EZLog项目中，settings.py被拆分成一个包，由__init__.py负责导入�
 
 - local.py: 提供你针对自己网站的设置，优先级最高
 
-  执行如下命令创建local.py::
+
+配置 django settings
+~~~~~~~~~~~~~~~~~~~~~
+
+请在 ezlog/settings/local.py 中配置自己的django settings.
+在 local.py 中出现的配置项将会覆盖 base.py 中相同项目的默认值。
+  
+可以执行如下命令根据样例创建local.py::
 
       $ cp ezlog/settings/local.sample ezlog/settings/local.py
+
+具体django有哪些可配置的项目，请参考 `Django settings文档
+<https://docs.djangoproject.com/en/1.4/topics/settings/>`_
+
+下面这些配置项特定于EZLog自身的：
+
+- MARKUP_LANGUAGE: 撰写Blog时使用的标记语言，
+  可选择 "markdown", "html". 并会分别为它们提供友好的在线编辑器。
+  你也可以选择使用其它标记语言，比如 restructuredtext,
+  但需要在 MEDIA_FOR_POST_EDITOR 中指定创建对应在线编辑器
+  所要使用的JS和CSS文件。
+
+- MEDIA_FOR_POST_EDITOR：创建在 MARKUP_LANGUAGE
+  中设置的标记语言对应的在线编辑器所需要的css和js文件。
+  
+  设置示例如下，其中css和js的URL是相对于 MEDIA_URL 的。
+
+  ::
+
+        MEDIA_FOR_POST_EDITOR = {
+            'html': {
+                'js': ('ckeditor/ckeditor.js',
+                       'ckeditor/config.js',
+                       'js/ckeditor-setup.js',
+                       'filebrowser/js/FB_CKEditor.js',
+                      ),
+                'css': (),
+            },
+
+            'markdown': {
+                'js': ('wmd/showdown.js',
+                       'wmd/wmd.js',),
+                'css': ('wmd/wmd.css',),
+            },
+
+            'restructuredtext': {
+                'js': (),
+                'css': (),
+            }
+        }
+
+
+下面这些配置项是一些依赖模块用到的：
+
+- COMPRESS_ENABLED：启用静态文件压缩功能。
+  启用后，请在部署前执行 `make compressstatic` 命令压缩静态文件。
+
+
+
+EZLog 设置
+----------
+
+除了Django settings, EZLog自身还包括了一个灵活的配置管理模块。
+
+EZLog的配置管理模块提供了一个友好的WEB界面来动态配置站点参数，
+URL是 */ezsettings/*.
+
+可以配置的项目包括:
+
+- 站点标题
+
+- 站点箴言：显示在站点标题附近
+
+- 公告信息：将显示在公告板中，置空则不显示公告板
+
+- 多说短域名：多说短域名。
+  EZLog集成了多数社会化评论系统，你可以到这里
+  http://duoshuo.com/create-site/
+  申请一个多说短域名为你的网站接入多说评论服务。
+
 
 
 

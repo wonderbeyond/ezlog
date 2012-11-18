@@ -6,15 +6,11 @@
 
 前端: 图片加载完成前显性提示
 
-plog 的 get.html 模板
-
 BUG: blog.query视图中的日期过滤不是按照当地时间的.
 
 per function cache
 
 html 消毒
-
-更加灵活的WEB配置(ezconf), 可通过WEB界面新建配置项目.
 
 文章阅读界面中添加[上一篇], [下一篇]
 

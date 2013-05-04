@@ -10,6 +10,8 @@ if 'DATABASE_URL' in os.environ:
 elif 'SERVER_SOFTWARE' in os.environ:
     # SAE
     from for_sae import *
+elif 'VCAP_SERVICES' in os.environ:
+    from for_af import *
 
 try:
     import switcher

@@ -57,6 +57,8 @@ EZLog是用 `Django <https://www.djangoproject.com/>`_ 开发的个人博客系�
 
 - libxml2-dev libxslt1-dev (needed by lxml)
 
+- libjpeg-dev libfreetype6-dev (needed by PIL)
+
 依赖的python模块
 ----------------
 
@@ -74,7 +76,7 @@ EZLog是用 `Django <https://www.djangoproject.com/>`_ 开发的个人博客系�
 
 - django-filebrowser
 
-- PIL(needed by django-filebrowser, PIL needs libjpeg libjpeg-dev)
+- PIL(needed by django-filebrowser)
 
 - South
 

@@ -16,3 +16,5 @@ lxml>=2.3.4
 pyquery==1.2.1
 versiontools==1.9.1
 wsgiref==0.1.2
+psycopg2
+dj-database-url

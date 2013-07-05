@@ -2,6 +2,7 @@
 from django.conf import settings
 import os, json
 from ezconf.models import EZSettingsData
+from django.db import transaction
 
 class EZSettings(object):
     '''EZLog 配置存储模型
@@ -75,4 +76,4 @@ try:
     from django.db.utils import DatabaseError
     ezsettings = EZSettings()
 except DatabaseError: # may under command `manage.py syncdb`
-    pass
+    transaction.rollback()

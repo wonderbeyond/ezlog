@@ -13,8 +13,7 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
-import os, sys
-sys.path.insert(0, os.path.dirname(os.path.dirname( os.path.realpath(__file__) )))
+import os
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ezlog.settings")
 
@@ -29,7 +28,9 @@ application = get_wsgi_application()
 # application = HelloWorldApplication(application)
 
 if __name__ == '__main__':
+    import os, sys
     from wsgiref import simple_server
+    sys.path.insert(0, os.path.dirname(os.path.dirname( os.path.realpath(__file__) )))
     host='127.0.0.1'
     port=8000
     server = simple_server.make_server(app=application, host=host, port=port)

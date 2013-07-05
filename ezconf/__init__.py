@@ -14,6 +14,7 @@ class EZSettings(object):
         print 'EZSettings.__init__()'
         self.load_settings()
 
+    @transaction.commit_on_success
     def load_settings(self):
         '''(重新)加载配置文件'''
         try:
@@ -76,4 +77,4 @@ try:
     from django.db.utils import DatabaseError
     ezsettings = EZSettings()
 except DatabaseError: # may under command `manage.py syncdb`
-    transaction.rollback()
+    pass

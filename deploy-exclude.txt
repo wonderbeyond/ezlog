@@ -1,0 +1,10 @@
+.git
+.*
+*.swp
+*~
+*.pyc
+*.sh
+*.log
+tags
+media/
+data/

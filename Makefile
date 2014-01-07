@@ -27,3 +27,6 @@ collectstatic:
 
 compressstatic:
 	$(MANAGE) compress
+
+deploy.sae:
+	bash ./deploy-to-sae.sh

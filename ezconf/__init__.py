@@ -11,12 +11,12 @@ class EZSettings(object):
     配置数据是有序分组的(参考 ezlog_config.json).'''
 
     def __init__(self):
-        print 'EZSettings.__init__()'
-        self.load_settings()
+        pass
 
     @transaction.commit_on_success
     def load_settings(self):
         '''(重新)加载配置文件'''
+        print 'EZSettings.load_settings()'
         try:
             settings_data = EZSettingsData.objects.get(pk=1).data
             self._settings = json.loads(settings_data)
@@ -30,6 +30,9 @@ class EZSettings(object):
     @property
     def settings(self):
         '''返回最新的配置数据'''
+        if not hasattr(self, '_settings'):
+            self.load_settings()
+
         return self._settings
 
     def as_dict(self):
@@ -53,7 +56,7 @@ class EZSettings(object):
 
     def as_json(self):
         # return a unicode instance.
-        return json.dumps(self._settings, ensure_ascii=False)
+        return json.dumps(self.settings, ensure_ascii=False)
 
 
     def as_form(self):
@@ -65,7 +68,7 @@ class EZSettings(object):
         settings_data.save()
 
     def as_readable_json(self):
-        return json.dumps(self._settings, ensure_ascii=False,
+        return json.dumps(self.settings, ensure_ascii=False,
                           indent=4)
 
     def reset_settings_with_json_data(self, data):
@@ -73,8 +76,4 @@ class EZSettings(object):
         self._settings = json.loads(data)
         self.save()
 
-try:
-    from django.db.utils import DatabaseError
-    ezsettings = EZSettings()
-except DatabaseError: # may under command `manage.py syncdb`
-    pass
+ezsettings = EZSettings()

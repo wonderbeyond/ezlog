@@ -50,6 +50,7 @@ class Category(BaseModel):
 class EntryManager(models.Manager):
     '''return accessible objects for specified user'''
     def accessibles(self, user):
+        #FIXME: 不再区分是否superuser
         if user.is_superuser:
             entries = Entry.objects.all()
         else:

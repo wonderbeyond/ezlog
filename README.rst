@@ -256,6 +256,10 @@ URL是 */ezsettings/*.
   申请一个多说短域名为你的网站接入多说评论服务。
 
 
+TODO
+====
+
+- add full **toc** support for blog entry
 
 
 .. _开发笔记: https://github.com/wonderbeyond/ezlog/blob/master/doc/dev_notes.rst

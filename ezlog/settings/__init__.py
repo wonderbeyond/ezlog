@@ -17,12 +17,8 @@ except ImportError as e:
     print e
     pass
 
-try:
-    import switcher
-except ImportError:
-    pass
-else:
-    exec 'from %s import *' % switcher.SELECTION
+running_mode = os.environ.get('RUNNING_MODE', 'production')
+exec 'from %s import *' % running_mode
 
 try:
     from local import *

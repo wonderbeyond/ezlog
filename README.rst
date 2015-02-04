@@ -169,10 +169,9 @@ EZLog项目中，settings.py被拆分成一个包，由__init__.py负责导入�
 
 - production.py: 提供特定于生产环境下的设置
 
-- switcher.py: 用来切换生产环境和测试环境的设置
-
 - local.py: 提供你针对自己网站的设置，优先级最高
 
+.. note:: 通过设置环境变量 `RUNNING_MODE` 来指定测试环境还是生产环境
 
 配置 django settings
 ~~~~~~~~~~~~~~~~~~~~~

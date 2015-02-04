@@ -78,8 +78,6 @@ EZLog是用 `Django <https://www.djangoproject.com/>`_ 开发的个人博客系�
 
 - PIL(needed by django-filebrowser)
 
-- South
-
 - django-compressor
 
 - django-mptt

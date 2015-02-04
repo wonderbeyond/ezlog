@@ -234,7 +234,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'mptt',
-    'south',
     'compressor',
     'taggit',
     'common',

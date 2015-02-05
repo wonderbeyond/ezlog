@@ -1,7 +1,7 @@
 # coding=utf-8
 from django import forms
 from django.forms.util import flatatt
-from django.utils.encoding import StrAndUnicode, force_unicode
+from django.utils.encoding import force_unicode
 from django.utils.safestring import mark_safe
 
 class RichTextWidget(forms.Textarea):

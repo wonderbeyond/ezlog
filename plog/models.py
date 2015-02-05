@@ -1,6 +1,6 @@
 #coding=utf-8
 from django.db import models
-from django.contrib.auth.admin import User
+from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
 
 class Category(models.Model):

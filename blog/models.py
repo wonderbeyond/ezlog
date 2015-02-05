@@ -1,7 +1,7 @@
 # coding=utf-8
 from django.conf import settings
 from django.db import models
-from django.contrib.auth.admin import User
+from django.contrib.auth.models import User
 from django.core.cache import cache
 from django.utils.html import strip_tags
 from django.utils.encoding import force_unicode

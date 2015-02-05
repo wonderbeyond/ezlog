@@ -4,10 +4,7 @@ from django.db import models
 from django.contrib.auth.admin import User
 from django.core.cache import cache
 from django.utils.html import strip_tags
-
-from django.contrib.markup.templatetags.markup import markdown
-from django.contrib.markup.templatetags.markup import textile
-from django.contrib.markup.templatetags.markup import restructuredtext
+from django.utils.encoding import force_unicode
 
 import os, re, time, cgi
 from pyquery import PyQuery as pq
@@ -98,6 +95,7 @@ class Entry(BaseModel):
     @property
     def html_content(self):
         """Return the entry's content formatted in HTML"""
+        import markdown
         def asserted_html(s):
             return ( re.match(r'^\s*<\w+>', s) or
                      re.match(r'^\s*<\w+\s+.*>', s)
@@ -107,9 +105,14 @@ class Entry(BaseModel):
             print "ASSERT HTML"
             return self.content
         elif settings.MARKUP_LANGUAGE == 'markdown':
-            return markdown(self.content, 'abbr,tables,smart_strong')
+            return markdown.markdown(self.content, 'abbr,tables,smart_strong'.split(','))
         elif settings.MARKUP_LANGUAGE == 'restructuredtext':
-            return restructuredtext(self.content)
+            from docutils.core import publish_parts
+            docutils_settings = getattr(settings, "RESTRUCTUREDTEXT_FILTER_SETTINGS", {})
+            parts = publish_parts(source=smart_str(self.content),
+                                  writer_name="html4css1",
+                                  settings_overrides=docutils_settings)
+            return force_unicode(parts["fragment"])
         elif '</p>' not in self.content:
             return linebreaks(self.content)
         else:

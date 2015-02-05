@@ -10,7 +10,7 @@
 {% if entry.tags_list %}
 <span class="item tags"><i class="icon-tags k"></i>
     {% for t in entry.tags_list %}
-    <a class="tag-item" href="{% url blog.query tag=t.id %}">{{t.name}}</a>
+    <a class="tag-item" href="{% url "blog.query" tag=t.id %}">{{t.name}}</a>
     {% endfor %}
 </span>{% endif %}
 <span class="item"><i class="icon-comment"></i>
@@ -19,5 +19,5 @@
 </span>
 {% if user == entry.author %}
 <span class="item"><i class="icon-edit"></i>
-    <a href="{% url admin:blog_entry_change entry.pk %}">编辑</a></span>
+    <a href="{% url "admin:blog_entry_change" entry.pk %}">编辑</a></span>
 {% endif %}

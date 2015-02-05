@@ -61,11 +61,11 @@
   <div class="container">
     {% if user.is_superuser %}
     <div id="admin-bar">
-        <h1><a href="{% url admin:index %}">管理</a></h1>
+        <h1><a href="{% url "admin:index" %}">管理</a></h1>
         <ul class="quicklinks">
-            <li><a href="{% url admin:blog_entry_add %}">添加文章</a></li>
-            <li><a href="{% url admin:pages_page_add %}">添加页面</a></li>
-            <li><a href="{% url ezconf.index %}">站点参数</a></li>
+            <li><a href="{% url "admin:blog_entry_add" %}">添加文章</a></li>
+            <li><a href="{% url "admin:pages_page_add" %}">添加页面</a></li>
+            <li><a href="{% url "ezconf.index" %}">站点参数</a></li>
         </ul>
     </div>
     {% endif %}
@@ -74,7 +74,7 @@
         <div>
             {% spaceless %}
             <h1 class="site-title">
-                <a href="{% url site.index %}">{{ezsettings.common.site_title|default:"EZLog"}}</a>
+                <a href="{% url "site.index" %}">{{ezsettings.common.site_title|default:"EZLog"}}</a>
             </h1>
             {% endspaceless %}
             <p class="motto">{{ezsettings.common.site_motto|default:"留一半清醒啊留一半醉，至少梦里有你追随~"}}</p>
@@ -88,13 +88,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </div> <!-- .toggle-button -->
-                <form class="search-form" action="{% url blog.index %}" method="get">
+                <form class="search-form" action="{% url "blog.index" %}" method="get">
                     <input name="search" type="search" placeholder="搜索" class="" />
                     <button type="submit" class="">搜索</button>
                 </form>
                 <ul class="nav-links">
-                    <li><a href="{% url site.index %}">首页</a></li>
-                    <li><a href="{% url plog.index %}">图志</a></li>
+                    <li><a href="{% url "site.index" %}">首页</a></li>
+                    <li><a href="{% url "plog.index" %}">图志</a></li>
                     {% for p in nav_pages %}
                         <li class="more"><a href={{p.get_absolute_url}}>{{p.title}}</a></li>
                     {% endfor %}

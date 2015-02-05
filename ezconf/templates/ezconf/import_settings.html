@@ -8,14 +8,14 @@
 
 {% block breadcrumbs %}
   <ul class="grp-horizontal-list">
-    <li><a href="{% url admin:index %}">{% trans "Home" %}</a></li>
+    <li><a href="{% url "admin:index" %}">{% trans "Home" %}</a></li>
     <li>{% trans "Import Settings" %}</li>
   </ul>
 {% endblock %}
 
 {% block content %}
 <div class="">
-<form action="{% url ezconf.import_settings %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+<form action="{% url "ezconf.import_settings" %}" method="post" enctype="multipart/form-data">{% csrf_token %}
     {{ form }}
     <style type="text/css">label[for=id_file]{display: none;}</style>
     <input type="submit" value="{% trans 'Import' %}">

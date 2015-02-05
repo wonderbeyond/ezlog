@@ -18,7 +18,7 @@
         {% if pl.tags.all %}
         <span class="item tags"><i class="icon-tags"></i>
             {% for t in pl.tags.all %}
-            <a class="tag-item" href="{% url plog.query tag=t.id %}">{{t.name}}</a>
+            <a class="tag-item" href="{% url "plog.query" tag=t.id %}">{{t.name}}</a>
             {% endfor %}
         </span>
         {% endif %}

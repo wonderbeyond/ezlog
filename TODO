@@ -17,3 +17,5 @@ html 消毒
 允许指定页面(pages.Page)使用的模版
 
 add favicon
+
+support different MARKUP_LANGUAGE for different posts
